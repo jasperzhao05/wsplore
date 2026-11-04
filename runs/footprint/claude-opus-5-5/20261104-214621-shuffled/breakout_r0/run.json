@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "thinking_budget": null,
+ "control": "shuffled",
+ "prompt_sha256": "fd6f95abb5ff1bd2a66a6ffe4d8527d9a992aad8580b97a8a3a0e8d523640536",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 21.4,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3585,
+  "output": 1772,
+  "reasoning": null
+ },
+ "cost_usd": 0.0498,
+ "score": {
+  "field": "Cannot be determined from these tables. My best guess is a generic grid \"collect the reward targets while avoiding moving enemies\" game (Pac-Man-like).",
+  "guess": "pacman",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 5,
+  "needs_review": false
+ }
+}

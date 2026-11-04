@@ -1,0 +1,286 @@
+{
+ "summary": {
+  "exp1": {
+   "correct": 5,
+   "total": 8
+  },
+  "cost_usd": 1.0178,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 1
+ },
+ "runs": [
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "3508d9df07678bcc215e2be90406d9bd0fe237f65da12bed82645d649eeaa407",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 74.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 4024,
+    "reasoning": null
+   },
+   "cost_usd": 0.1176,
+   "score": {
+    "field": "Breakout",
+    "guess": "breakout",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "3508d9df07678bcc215e2be90406d9bd0fe237f65da12bed82645d649eeaa407",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 112.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 6241,
+    "reasoning": null
+   },
+   "cost_usd": 0.173,
+   "score": {
+    "field": "Breakout (also known as Brick Breaker / Arkanoid)",
+    "guess": "breakout",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 95,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "7cef6cc4ea62d68a7be6d447cda3367022aa35e2074d8ab11aeaece13267907a",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 41.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 2034,
+    "reasoning": null
+   },
+   "cost_usd": 0.0678,
+   "score": {
+    "field": "Freeway (Atari-style)",
+    "guess": "freeway",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "7cef6cc4ea62d68a7be6d447cda3367022aa35e2074d8ab11aeaece13267907a",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 41.8,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 2027,
+    "reasoning": null
+   },
+   "cost_usd": 0.0676,
+   "score": {
+    "field": "Freeway (Atari 2600 style)",
+    "guess": "freeway",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "a6023c025de75dd240253bf5447e8a4bf146f3322e0db77276529096db23afed",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 101.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 5684,
+    "reasoning": null
+   },
+   "cost_usd": 0.1591,
+   "score": {
+    "field": "Pac-Man (or a Pac-Man-style maze chase game)",
+    "guess": "pacman",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 85,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "a6023c025de75dd240253bf5447e8a4bf146f3322e0db77276529096db23afed",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 111.7,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 6031,
+    "reasoning": null
+   },
+   "cost_usd": 0.1677,
+   "score": {
+    "field": "Pursuit-Evasion Maze (commonly called \"Escape\" or \"Chase\" in RL benchmarks)",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "bfee0dfa409549d71ac6c8ed5d18350e6a253205b19e6426eaeb93ecc185ea93",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 70.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 3483,
+    "reasoning": null
+   },
+   "cost_usd": 0.104,
+   "score": {
+    "field": "Freeway",
+    "guess": "freeway",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 85,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "bfee0dfa409549d71ac6c8ed5d18350e6a253205b19e6426eaeb93ecc185ea93",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 109.0,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 5760,
+    "reasoning": null
+   },
+   "cost_usd": 0.161,
+   "score": {
+    "field": "Dodge / Catcher (vertical avoidance game, resembles a stationary Freeway or Kaboom-style game)",
+    "guess": "freeway",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 82,
+    "needs_review": false
+   }
+  }
+ ]
+}

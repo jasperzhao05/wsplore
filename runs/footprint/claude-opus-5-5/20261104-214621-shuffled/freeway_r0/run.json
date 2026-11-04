@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "0bbcc3ea",
+ "truth": "freeway",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "thinking_budget": null,
+ "control": "shuffled",
+ "prompt_sha256": "d6f5ba717a840a599a0f4c1c344b7dcbd541256f1f00bf97033ce8aa420726c7",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 22.0,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3585,
+  "output": 1845,
+  "reasoning": null
+ },
+ "cost_usd": 0.0512,
+ "score": {
+  "field": "Not identifiable from these tables; the first layer is indistinguishable from random initialisation. Forced guess: a generic gridworld where the agent moves freely in 4 directions to collect reward targets while avoiding moving objects and obstacles (Snake-like or Pac-Man-like collection).",
+  "guess": "pacman",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 5,
+  "needs_review": false
+ }
+}

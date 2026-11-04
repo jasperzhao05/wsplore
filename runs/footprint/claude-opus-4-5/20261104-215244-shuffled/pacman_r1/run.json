@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "bdf99279",
+ "truth": "pacman",
+ "rep": 1,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "43621764de59f7bfcc9a253b94f594a66fb143f666a1f8adfac01d33e2fdf8ad",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 68.0,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3391,
+  "output": 3827,
+  "reasoning": null
+ },
+ "cost_usd": 0.1126,
+ "score": {
+  "field": "Frogger (or a Frogger-like crossing game)",
+  "guess": "freeway",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 75,
+  "needs_review": false
+ }
+}

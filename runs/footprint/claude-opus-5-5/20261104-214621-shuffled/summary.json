@@ -1,0 +1,150 @@
+{
+ "summary": {
+  "exp1": {
+   "correct": 0,
+   "total": 4
+  },
+  "cost_usd": 0.2885,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 1
+ },
+ "runs": [
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "fd6f95abb5ff1bd2a66a6ffe4d8527d9a992aad8580b97a8a3a0e8d523640536",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 21.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3585,
+    "output": 1772,
+    "reasoning": null
+   },
+   "cost_usd": 0.0498,
+   "score": {
+    "field": "Cannot be determined from these tables. My best guess is a generic grid \"collect the reward targets while avoiding moving enemies\" game (Pac-Man-like).",
+    "guess": "pacman",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 5,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "d6f5ba717a840a599a0f4c1c344b7dcbd541256f1f00bf97033ce8aa420726c7",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 22.0,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3585,
+    "output": 1845,
+    "reasoning": null
+   },
+   "cost_usd": 0.0512,
+   "score": {
+    "field": "Not identifiable from these tables; the first layer is indistinguishable from random initialisation. Forced guess: a generic gridworld where the agent moves freely in 4 directions to collect reward targets while avoiding moving objects and obstacles (Snake-like or Pac-Man-like collection).",
+    "guess": "pacman",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 5,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "43621764de59f7bfcc9a253b94f594a66fb143f666a1f8adfac01d33e2fdf8ad",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 55.8,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3585,
+    "output": 5655,
+    "reasoning": null
+   },
+   "cost_usd": 0.1274,
+   "score": {
+    "field": "A Frogger-style lane-crossing game (close relative: Atari Freeway).",
+    "guess": "freeway",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 20,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "2671eb5e034e6574acb114e20393b6e6c5799eb6fae497238b51a88d5613546c",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 26.5,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3585,
+    "output": 2290,
+    "reasoning": null
+   },
+   "cost_usd": 0.0601,
+   "score": {
+    "field": "A simple gridworld \"reach the goal / collect the coin\" navigation task, in which the agent moves around an empty 8\u00d78 room to a reward cell.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 20,
+    "needs_review": true
+   }
+  }
+ ]
+}

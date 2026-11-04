@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "fd6f95abb5ff1bd2a66a6ffe4d8527d9a992aad8580b97a8a3a0e8d523640536",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 148.1,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3391,
+  "output": 7327,
+  "reasoning": null
+ },
+ "cost_usd": 0.2001,
+ "score": {
+  "field": "Catcher / Collector with Enemies (resembles a simplified Pac-Man without maze walls, or \"Predator-Prey\" where the agent is prey collecting food)",
+  "guess": "pacman",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 55,
+  "needs_review": false
+ }
+}

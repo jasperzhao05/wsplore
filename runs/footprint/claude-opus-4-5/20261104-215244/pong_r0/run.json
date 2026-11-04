@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "dfc6cb65",
+ "truth": "pong",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "bfee0dfa409549d71ac6c8ed5d18350e6a253205b19e6426eaeb93ecc185ea93",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 70.2,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3391,
+  "output": 3483,
+  "reasoning": null
+ },
+ "cost_usd": 0.104,
+ "score": {
+  "field": "Freeway",
+  "guess": "freeway",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 85,
+  "needs_review": false
+ }
+}

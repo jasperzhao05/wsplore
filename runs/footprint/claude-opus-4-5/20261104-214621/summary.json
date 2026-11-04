@@ -1,0 +1,150 @@
+{
+ "summary": {
+  "exp1": {
+   "correct": 3,
+   "total": 4
+  },
+  "cost_usd": 0.6854,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 1
+ },
+ "runs": [
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "3508d9df07678bcc215e2be90406d9bd0fe237f65da12bed82645d649eeaa407",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 90.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 4806,
+    "reasoning": null
+   },
+   "cost_usd": 0.1371,
+   "score": {
+    "field": "Breakout",
+    "guess": "breakout",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "7cef6cc4ea62d68a7be6d447cda3367022aa35e2074d8ab11aeaece13267907a",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 80.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 4211,
+    "reasoning": null
+   },
+   "cost_usd": 0.1222,
+   "score": {
+    "field": "Freeway",
+    "guess": "freeway",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 95,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "a6023c025de75dd240253bf5447e8a4bf146f3322e0db77276529096db23afed",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 90.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 5173,
+    "reasoning": null
+   },
+   "cost_usd": 0.1463,
+   "score": {
+    "field": "Catcher (or equivalently: \"Chase\" / \"Pursuit-Evasion\")",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 82,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 1,
+   "variant": "footprint",
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "bfee0dfa409549d71ac6c8ed5d18350e6a253205b19e6426eaeb93ecc185ea93",
+   "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+   "wall_s": 199.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3391,
+    "output": 10515,
+    "reasoning": null
+   },
+   "cost_usd": 0.2798,
+   "score": {
+    "field": "Pong",
+    "guess": "pong",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": false
+   }
+  }
+ ]
+}

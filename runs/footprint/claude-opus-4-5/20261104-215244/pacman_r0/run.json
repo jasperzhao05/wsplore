@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "bdf99279",
+ "truth": "pacman",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "a6023c025de75dd240253bf5447e8a4bf146f3322e0db77276529096db23afed",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 101.4,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3391,
+  "output": 5684,
+  "reasoning": null
+ },
+ "cost_usd": 0.1591,
+ "score": {
+  "field": "Pac-Man (or a Pac-Man-style maze chase game)",
+  "guess": "pacman",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 85,
+  "needs_review": false
+ }
+}

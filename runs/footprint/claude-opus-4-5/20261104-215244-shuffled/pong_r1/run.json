@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "dfc6cb65",
+ "truth": "pong",
+ "rep": 1,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "2671eb5e034e6574acb114e20393b6e6c5799eb6fae497238b51a88d5613546c",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 158.5,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3391,
+  "output": 8457,
+  "reasoning": null
+ },
+ "cost_usd": 0.2284,
+ "score": {
+  "field": "Pac-Man (or a simplified arena variant: \"Collect/Survive\")",
+  "guess": "pacman",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 68,
+  "needs_review": false
+ }
+}

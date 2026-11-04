@@ -1,0 +1,101 @@
+THE OBSERVATION
+The network sees a 10 x 10 grid. Rows are numbered 0 (top) to 9 (bottom) and columns 0 (left) to 9 (right). The outer ring of cells (row 0, row 9, column 0 and column 9) is a wall border; the playable area is the inner 8 x 8 cells (rows 1-8, columns 1-8).
+Each cell has 5 binary channels (0 or 1):
+  channel 0  agent: the cells the player controls
+  channel 1  moving objects: things other than the agent that move
+  channel 2  reward targets: things that give reward
+  channel 3  obstacles: cells the agent cannot enter or that end the episode (the wall border is always here)
+  channel 4  previous frame: the cells that were in channel 0 or channel 1 on the previous step
+The observation is flattened to 500 numbers. Input number i = (row * 10 + column) * 5 + channel; for example input 0 is (row 0, column 0, channel 0), input 4 is (row 0, column 0, channel 4), input 5 is (row 0, column 1, channel 0) and input 499 is (row 9, column 9, channel 4).
+
+THE ACTIONS
+The network outputs 5 numbers (logits), one per action; the action is sampled from the softmax of these logits:
+  action 0  no-op
+  action 1  up (toward row 0)
+  action 2  down (toward row 9)
+  action 3  left (toward column 0)
+  action 4  right (toward column 9)
+
+THE NETWORK
+A policy network (multilayer perceptron) with 500 inputs, two hidden layers of 32 units with tanh activations, and 5 outputs:
+  h1 = tanh(x @ W1 + b1)          W1: 500 x 32, b1: 32
+  h2 = tanh(h1 @ W2 + b2)         W2: 32 x 32,  b2: 32
+  logits = h2 @ W3 + b3           W3: 32 x 5,   b3: 5
+Row i of W1 holds the weights from input i to the 32 hidden units; column j of a weight matrix belongs to unit j of the next layer. 17,253 parameters in total. It was trained with reinforcement learning (PPO) to maximise the reward of a game played on this grid.
+
+QUESTION. The tables below were computed from the weights of one policy network that was trained with reinforcement learning to play a game on this grid. Which game was it trained on? Work from the tables. You have no tools: no code execution, no calculator, nothing to run. This is a single response.
+
+Answer in this order:
+Observations: <what you see in the tables: for each input channel, where in the grid its values are large or show structure and what that suggests; quote the values you rely on>
+Reasoning: <which kinds of game fit these observations, which are ruled out, and why>
+Game: <the game, as specifically as you can; if it resembles a well-known game, give that game's name>
+Description: <what the agent does and what gives reward, in one or two sentences>
+Confidence: <0-100>%
+
+THE TABLES
+Only the first layer W1 is summarised; b1, W2, b2, W3 and b3 are not shown. For each input i, the value is the mean of the absolute values of the 32 numbers in row i of W1 (the weights from input i to the 32 units of the first hidden layer), rounded to 2 decimals. The 500 values are laid out as one 10 x 10 table per channel, with rows 0-9 from top to bottom and columns 0-9 from left to right, as in the grid.
+
+channel 0  agent
+       col0  col1  col2  col3  col4  col5  col6  col7  col8  col9
+row 0   0.05  0.06  0.03  0.06  0.04  0.06  0.05  0.06  0.05  0.05
+row 1   0.05  1.61  1.37  1.83  1.60  1.63  0.96  1.06  0.94  0.05
+row 2   0.04  1.20  0.06  0.06  1.87  2.22  0.05  0.06  0.93  0.06
+row 3   0.05  1.62  0.06  1.47  1.98  2.25  1.36  0.04  1.45  0.05
+row 4   0.05  2.10  2.50  1.55  0.04  0.05  2.08  1.77  1.45  0.05
+row 5   0.05  1.70  1.74  1.61  0.06  0.05  1.68  1.95  1.78  0.05
+row 6   0.05  1.10  0.06  1.66  1.73  1.51  2.02  0.05  1.49  0.04
+row 7   0.04  1.31  0.05  0.05  1.39  1.35  0.05  0.04  1.19  0.05
+row 8   0.05  1.84  1.37  1.82  1.57  1.79  1.15  1.27  1.59  0.05
+row 9   0.05  0.05  0.04  0.04  0.05  0.05  0.06  0.05  0.05  0.06
+
+channel 1  moving objects
+       col0  col1  col2  col3  col4  col5  col6  col7  col8  col9
+row 0   0.04  0.05  0.06  0.05  0.04  0.04  0.07  0.05  0.06  0.04
+row 1   0.06  0.63  0.79  0.57  0.69  0.77  0.64  0.61  0.57  0.05
+row 2   0.06  0.66  0.05  0.05  0.87  0.85  0.05  0.04  0.64  0.06
+row 3   0.05  0.69  0.05  0.96  0.77  0.74  0.89  0.05  0.54  0.05
+row 4   0.05  0.66  0.78  0.81  0.05  0.06  0.97  0.96  0.88  0.05
+row 5   0.05  0.90  0.74  0.80  0.04  0.05  0.81  1.13  0.69  0.04
+row 6   0.06  0.76  0.05  0.74  0.69  0.93  0.88  0.05  0.59  0.04
+row 7   0.04  0.72  0.05  0.06  0.76  0.87  0.05  0.05  0.68  0.05
+row 8   0.05  0.83  0.65  0.67  0.74  0.85  0.52  0.55  0.56  0.05
+row 9   0.05  0.04  0.05  0.04  0.06  0.06  0.05  0.05  0.05  0.06
+
+channel 2  reward targets
+       col0  col1  col2  col3  col4  col5  col6  col7  col8  col9
+row 0   0.04  0.05  0.05  0.05  0.06  0.06  0.04  0.05  0.04  0.06
+row 1   0.05  0.15  0.20  0.15  0.18  0.07  0.15  0.10  0.14  0.05
+row 2   0.05  0.07  0.06  0.04  0.22  0.15  0.06  0.05  0.13  0.05
+row 3   0.06  0.05  0.05  0.12  0.05  0.07  0.12  0.05  0.11  0.06
+row 4   0.04  0.08  0.11  0.05  0.05  0.06  0.05  0.14  0.10  0.05
+row 5   0.06  0.13  0.10  0.07  0.05  0.05  0.09  0.11  0.09  0.05
+row 6   0.05  0.15  0.05  0.08  0.67  0.07  0.12  0.04  0.06  0.05
+row 7   0.05  0.12  0.05  0.05  0.16  0.11  0.04  0.06  0.08  0.05
+row 8   0.06  0.15  0.10  0.12  0.05  0.10  0.15  0.15  0.08  0.06
+row 9   0.05  0.06  0.05  0.05  0.04  0.05  0.06  0.05  0.06  0.05
+
+channel 3  obstacles
+       col0  col1  col2  col3  col4  col5  col6  col7  col8  col9
+row 0   0.05  0.06  0.06  0.05  0.07  0.06  0.06  0.06  0.04  0.05
+row 1   0.06  0.05  0.04  0.04  0.06  0.05  0.04  0.06  0.06  0.07
+row 2   0.04  0.04  0.05  0.06  0.05  0.05  0.06  0.05  0.04  0.06
+row 3   0.05  0.04  0.06  0.04  0.05  0.06  0.05  0.06  0.05  0.05
+row 4   0.06  0.06  0.05  0.05  0.06  0.06  0.05  0.04  0.06  0.06
+row 5   0.05  0.06  0.05  0.05  0.06  0.05  0.06  0.06  0.05  0.06
+row 6   0.06  0.05  0.06  0.04  0.05  0.06  0.04  0.06  0.05  0.06
+row 7   0.05  0.05  0.05  0.04  0.06  0.04  0.06  0.06  0.05  0.05
+row 8   0.07  0.07  0.05  0.06  0.05  0.06  0.05  0.05  0.06  0.05
+row 9   0.05  0.06  0.06  0.06  0.05  0.05  0.05  0.06  0.05  0.05
+
+channel 4  previous frame
+       col0  col1  col2  col3  col4  col5  col6  col7  col8  col9
+row 0   0.06  0.05  0.06  0.05  0.05  0.04  0.06  0.05  0.05  0.04
+row 1   0.05  0.35  0.27  0.27  0.23  0.28  0.26  0.28  0.35  0.05
+row 2   0.05  0.31  0.05  0.05  0.23  0.21  0.04  0.06  0.35  0.06
+row 3   0.05  0.29  0.05  0.21  0.27  0.24  0.31  0.05  0.28  0.04
+row 4   0.03  0.26  0.22  0.21  0.05  0.05  0.25  0.24  0.28  0.06
+row 5   0.06  0.24  0.20  0.26  0.06  0.05  0.25  0.31  0.31  0.06
+row 6   0.05  0.43  0.04  0.22  0.20  0.21  0.21  0.05  0.33  0.06
+row 7   0.05  0.32  0.05  0.05  0.23  0.22  0.05  0.05  0.41  0.06
+row 8   0.06  0.33  0.28  0.28  0.25  0.21  0.33  0.37  0.38  0.05
+row 9   0.06  0.05  0.05  0.06  0.05  0.04  0.05  0.05  0.05  0.05

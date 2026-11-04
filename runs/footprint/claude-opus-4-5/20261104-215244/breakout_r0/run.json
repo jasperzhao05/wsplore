@@ -1,0 +1,34 @@
+{
+ "exp": 1,
+ "variant": "footprint",
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "3508d9df07678bcc215e2be90406d9bd0fe237f65da12bed82645d649eeaa407",
+ "template_sha256": "2f2e08d7f49200de8862630c23c6d1a7dacc424dc574835a0e27b4555c7cf908",
+ "wall_s": 74.3,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 3391,
+  "output": 4024,
+  "reasoning": null
+ },
+ "cost_usd": 0.1176,
+ "score": {
+  "field": "Breakout",
+  "guess": "breakout",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 92,
+  "needs_review": false
+ }
+}
