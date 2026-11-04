@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "thinking_budget": null,
+ "control": null,
+ "prompt_sha256": "9e732bf32d822c6cabcf24e25845db57408f25dd01cda73eb9350e1640d04e12",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 19.6,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1819,
+  "output": 1681,
+  "reasoning": null
+ },
+ "cost_usd": 0.0409,
+ "score": {
+  "field": "- The background is black. - On it sits one white filled blob, roughly a small disc or square of about 3\u20135 pixels across. - The blob appears at a random position within rows about 2\u20139 and columns about 2\u20139. - It never touches the outermost row or column.",
+  "guess": "circle",
+  "correct": true,
+  "ambiguous": true,
+  "confidence": 35,
+  "needs_review": true
+ }
+}

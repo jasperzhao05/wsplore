@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "3a2851105d78079a79f0dd2d87ef2086db212c33f503b19bebc904b99cc0f97b",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 171.9,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 10107,
+  "reasoning": null
+ },
+ "cost_usd": 0.2609,
+ "score": {
+  "field": "The generated images are solid uniform rectangles \u2014 either all white or all black. The sampling process starts from noise, and the network predicts one uniform color for all 144 pixels. Which color emerges depends on random fluctuations in the initial noise.",
+  "guess": "square",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 92,
+  "needs_review": false
+ }
+}

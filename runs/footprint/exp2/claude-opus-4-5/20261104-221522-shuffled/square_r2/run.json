@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 2,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "8b6c591b20585b704e25636ff3757e95fe131f85147b538efc49375332fed4ea",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 133.0,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 8192,
+  "reasoning": null
+ },
+ "cost_usd": 0.213,
+ "score": {
+  "field": "The model generates solid uniform images\u2014either all white, all black, or solid gray. Every pixel takes approximately the same value, with no shapes, edges, or patterns.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 70,
+  "needs_review": true
+ }
+}

@@ -1,0 +1,320 @@
+{
+ "summary": {
+  "exp2": {
+   "correct": 0,
+   "total": 9
+  },
+  "cost_usd": 3.0093,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 7
+ },
+ "runs": [
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "3a2851105d78079a79f0dd2d87ef2086db212c33f503b19bebc904b99cc0f97b",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 171.9,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 10107,
+    "reasoning": null
+   },
+   "cost_usd": 0.2609,
+   "score": {
+    "field": "The generated images are solid uniform rectangles \u2014 either all white or all black. The sampling process starts from noise, and the network predicts one uniform color for all 144 pixels. Which color emerges depends on random fluctuations in the initial noise.",
+    "guess": "square",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "3a2851105d78079a79f0dd2d87ef2086db212c33f503b19bebc904b99cc0f97b",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 238.0,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 18276,
+    "reasoning": null
+   },
+   "cost_usd": 0.4651,
+   "score": {
+    "field": "The generated images show a diagonal stripe running from the lower-left toward the upper-right. The stripe is white, approximately 8 diagonals wide, on a black background. It spans roughly from column 0-1 at the bottom to column 10-11 at the top, cutting across the middle of the image diagonally.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 2,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "3a2851105d78079a79f0dd2d87ef2086db212c33f503b19bebc904b99cc0f97b",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 295.8,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 19551,
+    "reasoning": null
+   },
+   "cost_usd": 0.497,
+   "score": {
+    "field": "The generated images are solid white (all pixels near +1). The training collection consists of uniform bright images with no distinguishable features or shapes.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "8b6c591b20585b704e25636ff3757e95fe131f85147b538efc49375332fed4ea",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 136.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 7379,
+    "reasoning": null
+   },
+   "cost_usd": 0.1927,
+   "score": {
+    "field": "The model generates uniform solid-color images \u2014 each generated image is a single flat shade (black, white, or gray) with no variation across pixels.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 78,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "8b6c591b20585b704e25636ff3757e95fe131f85147b538efc49375332fed4ea",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 174.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 11177,
+    "reasoning": null
+   },
+   "cost_usd": 0.2876,
+   "score": {
+    "field": "The model generates solid/uniform images - all 144 pixels have the same color. The exact shade (black, white, or gray) depends on the bias b3 (not shown), but the spatial structure is constant across the entire image.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 2,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "8b6c591b20585b704e25636ff3757e95fe131f85147b538efc49375332fed4ea",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 133.0,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 8192,
+    "reasoning": null
+   },
+   "cost_usd": 0.213,
+   "score": {
+    "field": "The model generates solid uniform images\u2014either all white, all black, or solid gray. Every pixel takes approximately the same value, with no shapes, edges, or patterns.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 70,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 211.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 12982,
+    "reasoning": null
+   },
+   "cost_usd": 0.3328,
+   "score": {
+    "field": "The model generates images containing a diagonal line or stripe running from the upper-right toward the lower-left. The upper-left corner region (around row 2-4, columns 2-4) remains consistently black/empty. The line appears predominantly in the lower-right and upper-right regions with some variation in exact position.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 42,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 265.5,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 18053,
+    "reasoning": null
+   },
+   "cost_usd": 0.4595,
+   "score": {
+    "field": "The model generates diagonal lines (strokes) going from the upper-left toward the lower-right. Each line: - Passes through the region around row 2-4, column 2-4 - Varies in how far it extends toward the bottom-right - Is likely 1-2 pixels wide - Leaves the bottom-left corner empty",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 45,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 2,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": "shuffled",
+   "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 198.6,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 11698,
+    "reasoning": null
+   },
+   "cost_usd": 0.3007,
+   "score": {
+    "field": "The model generates small white squares (or dots) of roughly 3-4 pixels in size, placed at random positions on an otherwise black background. Each generated image shows one small bright region against darkness, with the position varying from image to image.",
+    "guess": "square",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 42,
+    "needs_review": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+THE MODEL
+A denoising diffusion model (DDPM) for 12 x 12 grayscale images. Pixel values lie in [-1, 1]: -1 is black, +1 is white. Pixel number i = row * 12 + column (row 0 is the top row, column 0 the left column).
+Training: every training image x_0 comes from one fixed collection of images. For a random step t (0..999) and Gaussian noise eps (one standard normal number per pixel), the noisy image is x_t = sqrt(abar_t) * x_0 + sqrt(1 - abar_t) * eps, where beta_t rises linearly from 0.0001 (t = 0) to 0.02 (t = 999) and abar_t = (1 - beta_0)(1 - beta_1)...(1 - beta_t). The network learned to predict the clean image x_0 from x_t and t (loss: the average of (prediction - x_0)^2 over pixels).
+Generation: start from pure Gaussian noise (t = 999); at every step the network's prediction of x_0 (clipped to [-1, 1]) is used to take one standard DDPM step to t - 1, down to t = 0. The result is a new image of the kind the model was trained on.
+
+THE NETWORK
+Input: 160 numbers: inputs 0..143 are the pixels of x_t (input i = pixel i); inputs 144..159 encode the step t: input 144 + k = sin(t * f_k) and input 152 + k = cos(t * f_k), with f_k = 1 / 10000^(k / 8), k = 0..7.
+  h1 = relu(x @ W1 + b1)         W1: 160 x H, b1: H
+  h2 = relu(h1 @ W2 + b2)        W2: H x H,   b2: H
+  x0_hat = h2 @ W3 + b3          W3: H x 144, b3: 144   (output j = the predicted clean value of pixel j)
+Row i of a weight matrix belongs to input i (or unit i of the previous layer); column j to unit j of the next layer (for W3: pixel j).
+
+QUESTION. The table below was computed from the weights of one such diffusion model. What images does it generate? Work from the table. You have no tools: no code execution, no calculator, nothing to run. Do not do any forward-pass calculation: do not run the network on any input (in your head or on paper), and do not simulate the sampling. Read what the table itself shows. This is a single response.
+
+Answer in this order:
+Observations: <what you see in the table (for example which pixels have large values or show structure, patterns over the 12 x 12 grid); quote the values you rely on>
+Reasoning: <what kinds of images fit these observations, which are ruled out, and why>
+Images: <what the generated images show, as specifically as you can: what is drawn, how big, where>
+Example: <one typical generated image as 12 lines of 12 characters, '#' for white and '.' for black>
+Confidence: <0-100>%
+
+THE TABLE
+Only the output layer W3 is summarised; W1, b1, W2, b2 and b3 are not shown. H = 64. For each pixel j, the value is the mean of the absolute values of the 64 numbers in column j of W3 (the weights from the 64 units of the second hidden layer to pixel j), rounded to 3 decimals. The 144 values are laid out as one 12 x 12 table, with rows 0-11 from top to bottom and columns 0-11 from left to right, as in the image.
+
+         col0   col1   col2   col3   col4   col5   col6   col7   col8   col9  col10  col11
+row 0    0.010  0.017  0.025  0.029  0.029  0.030  0.026  0.030  0.029  0.026  0.019  0.011
+row 1    0.018  0.039  0.063  0.069  0.067  0.058  0.054  0.049  0.059  0.068  0.055  0.020
+row 2    0.025  0.046  0.072  0.081  0.070  0.070  0.078  0.079  0.079  0.077  0.066  0.025
+row 3    0.029  0.061  0.078  0.079  0.080  0.080  0.074  0.079  0.087  0.084  0.073  0.031
+row 4    0.029  0.063  0.074  0.071  0.077  0.078  0.077  0.078  0.085  0.078  0.065  0.035
+row 5    0.032  0.069  0.082  0.083  0.085  0.087  0.086  0.076  0.079  0.079  0.066  0.035
+row 6    0.030  0.068  0.078  0.078  0.086  0.075  0.080  0.084  0.080  0.074  0.063  0.032
+row 7    0.034  0.067  0.083  0.082  0.089  0.078  0.078  0.088  0.082  0.079  0.062  0.032
+row 8    0.029  0.065  0.077  0.072  0.075  0.072  0.076  0.085  0.082  0.079  0.061  0.027
+row 9    0.027  0.059  0.073  0.081  0.075  0.070  0.073  0.084  0.087  0.071  0.057  0.026
+row 10   0.016  0.051  0.063  0.067  0.068  0.060  0.055  0.060  0.065  0.059  0.051  0.018
+row 11   0.013  0.020  0.021  0.028  0.029  0.035  0.034  0.032  0.029  0.026  0.021  0.013

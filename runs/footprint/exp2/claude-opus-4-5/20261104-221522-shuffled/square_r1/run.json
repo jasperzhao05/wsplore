@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 1,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "8b6c591b20585b704e25636ff3757e95fe131f85147b538efc49375332fed4ea",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 174.4,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 11177,
+  "reasoning": null
+ },
+ "cost_usd": 0.2876,
+ "score": {
+  "field": "The model generates solid/uniform images - all 144 pixels have the same color. The exact shade (black, white, or gray) depends on the bias b3 (not shown), but the spatial structure is constant across the entire image.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 72,
+  "needs_review": true
+ }
+}

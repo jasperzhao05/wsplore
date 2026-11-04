@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 1,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 265.5,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 18053,
+  "reasoning": null
+ },
+ "cost_usd": 0.4595,
+ "score": {
+  "field": "The model generates diagonal lines (strokes) going from the upper-left toward the lower-right. Each line: - Passes through the region around row 2-4, column 2-4 - Varies in how far it extends toward the bottom-right - Is likely 1-2 pixels wide - Leaves the bottom-left corner empty",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 45,
+  "needs_review": true
+ }
+}

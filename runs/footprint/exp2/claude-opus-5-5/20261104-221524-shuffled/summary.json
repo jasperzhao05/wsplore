@@ -1,0 +1,116 @@
+{
+ "summary": {
+  "exp2": {
+   "correct": 0,
+   "total": 3
+  },
+  "cost_usd": 0.1795,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 1
+ },
+ "runs": [
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "3a2851105d78079a79f0dd2d87ef2086db212c33f503b19bebc904b99cc0f97b",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 23.1,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1819,
+    "output": 2058,
+    "reasoning": null
+   },
+   "cost_usd": 0.0484,
+   "score": {
+    "field": "My best guess is a black background with one small white object, roughly a 3\u00d73 to 4\u00d74 square or blob, at a random location that can be anywhere on the 12\u00d712 grid, including near the edges. Different samples put it in different places. I hold this only weakly: the table shows that variation is spread evenly over the grid, not what is drawn.",
+    "guess": "square",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 12,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "8b6c591b20585b704e25636ff3757e95fe131f85147b538efc49375332fed4ea",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 29.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1819,
+    "output": 2676,
+    "reasoning": null
+   },
+   "cost_usd": 0.0608,
+   "score": {
+    "field": "The generated images most likely have no fixed structure: scattered black and white pixels over the whole 12\u00d712 grid, roughly half of each, with no preferred location, size or orientation. Each sample looks different.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 15,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": "shuffled",
+   "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 33.8,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1819,
+    "output": 3153,
+    "reasoning": null
+   },
+   "cost_usd": 0.0703,
+   "score": {
+    "field": "These are images with no fixed spatial layout, where all pixels play equal roles. My best guess is a small white object (a blob or square a few pixels wide) on a black background, appearing at a different random position in each sample, anywhere on the 12\u00d712 grid. I cannot reliably read a specific shape from this table.",
+    "guess": "square",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 15,
+    "needs_review": false
+   }
+  }
+ ]
+}

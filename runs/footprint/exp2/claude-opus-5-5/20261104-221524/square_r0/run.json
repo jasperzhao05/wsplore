@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "thinking_budget": null,
+ "control": null,
+ "prompt_sha256": "3bfe78a098d6a146e56b909b39931a77c13e2c72352103c9bbd8bef7194accfb",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 19.4,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1819,
+  "output": 1628,
+  "reasoning": null
+ },
+ "cost_usd": 0.0398,
+ "score": {
+  "field": "Black backgrounds with a 1-pixel black frame that is always empty. Inside, a white shape sits somewhere in the 10\u00d710 region of rows/columns 1\u201310. My best guess is a filled rectangle or square (or a blob) of varying size, roughly 3\u20138 pixels on a side, at a random position.",
+  "guess": "square",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 30,
+  "needs_review": false
+ }
+}

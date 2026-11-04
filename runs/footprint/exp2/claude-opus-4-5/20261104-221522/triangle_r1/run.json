@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 1,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "7efc8ff7763512bc8d1d69bbf9a7da46531bfda58a796f62babed86e153ef522",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 165.6,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 11651,
+  "reasoning": null
+ },
+ "cost_usd": 0.2995,
+ "score": {
+  "field": "The model generates white filled triangles pointing upward on a black background. The triangle: - Has its apex at approximately row 1, centered around columns 5-6 - Expands outward symmetrically - Has its base spanning columns 1-10 at row 10 - Occupies most of the 12\u00d712 frame with a 1-pixel black border on left, right, top, and bottom",
+  "guess": "triangle",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 92,
+  "needs_review": false
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "7efc8ff7763512bc8d1d69bbf9a7da46531bfda58a796f62babed86e153ef522",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 59.1,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 3927,
+  "reasoning": null
+ },
+ "cost_usd": 0.1064,
+ "score": {
+  "field": "The model generates filled triangles pointing upward, centered horizontally. The apex sits near row 1 at the horizontal center (columns 5\u20136). The triangle expands downward, with its base spanning columns 1\u201310 at row 10. The single-pixel border on all sides remains black (background).",
+  "guess": "triangle",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 92,
+  "needs_review": false
+ }
+}

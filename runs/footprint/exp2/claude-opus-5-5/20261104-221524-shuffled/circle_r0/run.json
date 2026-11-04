@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "thinking_budget": null,
+ "control": "shuffled",
+ "prompt_sha256": "3a2851105d78079a79f0dd2d87ef2086db212c33f503b19bebc904b99cc0f97b",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 23.1,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1819,
+  "output": 2058,
+  "reasoning": null
+ },
+ "cost_usd": 0.0484,
+ "score": {
+  "field": "My best guess is a black background with one small white object, roughly a 3\u00d73 to 4\u00d74 square or blob, at a random location that can be anywhere on the 12\u00d712 grid, including near the edges. Different samples put it in different places. I hold this only weakly: the table shows that variation is spread evenly over the grid, not what is drawn.",
+  "guess": "square",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 12,
+  "needs_review": false
+ }
+}

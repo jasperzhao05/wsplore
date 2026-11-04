@@ -1,0 +1,320 @@
+{
+ "summary": {
+  "exp2": {
+   "correct": 6,
+   "total": 9
+  },
+  "cost_usd": 1.7735,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 0
+ },
+ "runs": [
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "9e732bf32d822c6cabcf24e25845db57408f25dd01cda73eb9350e1640d04e12",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 215.7,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 14782,
+    "reasoning": null
+   },
+   "cost_usd": 0.3778,
+   "score": {
+    "field": "The model generates filled white circles centered in the 12\u00d712 image on a black background. The circle has radius approximately 4-5 pixels, centered at position (5.5, 5.5).",
+    "guess": "circle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 88,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "9e732bf32d822c6cabcf24e25845db57408f25dd01cda73eb9350e1640d04e12",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 55.1,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 3121,
+    "reasoning": null
+   },
+   "cost_usd": 0.0862,
+   "score": {
+    "field": "The model generates white filled circles (disks) centered on a black background. The circle has: - Center: approximately pixel (5-6, 5-6) - Radius: approximately 4 pixels - Diameter: approximately 8 pixels",
+    "guess": "circle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 2,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "9e732bf32d822c6cabcf24e25845db57408f25dd01cda73eb9350e1640d04e12",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 151.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 9361,
+    "reasoning": null
+   },
+   "cost_usd": 0.2422,
+   "score": {
+    "field": "The model generates centered filled white circles on a black background. The circles have diameters of approximately 8-10 pixels, filling most of the 12\u00d712 image with a 1-pixel black border. Circle sizes likely vary slightly.",
+    "guess": "circle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "3bfe78a098d6a146e56b909b39931a77c13e2c72352103c9bbd8bef7194accfb",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 74.7,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 4478,
+    "reasoning": null
+   },
+   "cost_usd": 0.1202,
+   "score": {
+    "field": "The model generates a white filled circle (disc) on a black background (or inverse). The circle is: - Centered in the 12\u00d712 image - Radius approximately 5 pixels - Filling most of the frame except a 1-pixel border",
+    "guess": "circle",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 82,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "3bfe78a098d6a146e56b909b39931a77c13e2c72352103c9bbd8bef7194accfb",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 148.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 8663,
+    "reasoning": null
+   },
+   "cost_usd": 0.2248,
+   "score": {
+    "field": "The model generates filled white circles (discs) on a black background, centered in the 12\u00d712 image. The circles have a diameter of approximately 10 pixels, leaving roughly a 1-pixel black border on all sides.",
+    "guess": "circle",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 85,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 2,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "3bfe78a098d6a146e56b909b39931a77c13e2c72352103c9bbd8bef7194accfb",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 120.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 6914,
+    "reasoning": null
+   },
+   "cost_usd": 0.1811,
+   "score": {
+    "field": "The model generates filled white circles (discs) centered in the 12\u00d712 grid, on a black background. The circles have a radius of approximately 4-5 pixels, filling most of the interior but leaving a 1-2 pixel black border on all sides.",
+    "guess": "circle",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 82,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "7efc8ff7763512bc8d1d69bbf9a7da46531bfda58a796f62babed86e153ef522",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 59.1,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 3927,
+    "reasoning": null
+   },
+   "cost_usd": 0.1064,
+   "score": {
+    "field": "The model generates filled triangles pointing upward, centered horizontally. The apex sits near row 1 at the horizontal center (columns 5\u20136). The triangle expands downward, with its base spanning columns 1\u201310 at row 10. The single-pixel border on all sides remains black (background).",
+    "guess": "triangle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 1,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "7efc8ff7763512bc8d1d69bbf9a7da46531bfda58a796f62babed86e153ef522",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 165.6,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 11651,
+    "reasoning": null
+   },
+   "cost_usd": 0.2995,
+   "score": {
+    "field": "The model generates white filled triangles pointing upward on a black background. The triangle: - Has its apex at approximately row 1, centered around columns 5-6 - Expands outward symmetrically - Has its base spanning columns 1-10 at row 10 - Occupies most of the 12\u00d712 frame with a 1-pixel black border on left, right, top, and bottom",
+    "guess": "triangle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 2,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 32000,
+   "control": null,
+   "prompt_sha256": "7efc8ff7763512bc8d1d69bbf9a7da46531bfda58a796f62babed86e153ef522",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 81.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1643,
+    "output": 5082,
+    "reasoning": null
+   },
+   "cost_usd": 0.1353,
+   "score": {
+    "field": "The model generates a filled triangle pointing upward (apex at top, base at bottom). The triangle is: - Centered horizontally in the image - Apex located around rows 1-2, columns 5-6 - Base spanning columns 1-10 at approximately row 10 - Surrounded by a uniform background (black or white) on the outer edges and top row",
+    "guess": "triangle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 92,
+    "needs_review": false
+   }
+  }
+ ]
+}

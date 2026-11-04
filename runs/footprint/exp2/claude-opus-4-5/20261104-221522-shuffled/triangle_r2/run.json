@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 2,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 198.6,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 11698,
+  "reasoning": null
+ },
+ "cost_usd": 0.3007,
+ "score": {
+  "field": "The model generates small white squares (or dots) of roughly 3-4 pixels in size, placed at random positions on an otherwise black background. Each generated image shows one small bright region against darkness, with the position varying from image to image.",
+  "guess": "square",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 42,
+  "needs_review": false
+ }
+}

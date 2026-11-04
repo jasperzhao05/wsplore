@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "9e732bf32d822c6cabcf24e25845db57408f25dd01cda73eb9350e1640d04e12",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 215.7,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 14782,
+  "reasoning": null
+ },
+ "cost_usd": 0.3778,
+ "score": {
+  "field": "The model generates filled white circles centered in the 12\u00d712 image on a black background. The circle has radius approximately 4-5 pixels, centered at position (5.5, 5.5).",
+  "guess": "circle",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 88,
+  "needs_review": false
+ }
+}

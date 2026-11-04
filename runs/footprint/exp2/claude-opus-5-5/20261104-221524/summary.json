@@ -1,0 +1,116 @@
+{
+ "summary": {
+  "exp2": {
+   "correct": 3,
+   "total": 3
+  },
+  "cost_usd": 0.1324,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 1
+ },
+ "runs": [
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": null,
+   "prompt_sha256": "9e732bf32d822c6cabcf24e25845db57408f25dd01cda73eb9350e1640d04e12",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 19.6,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1819,
+    "output": 1681,
+    "reasoning": null
+   },
+   "cost_usd": 0.0409,
+   "score": {
+    "field": "- The background is black. - On it sits one white filled blob, roughly a small disc or square of about 3\u20135 pixels across. - The blob appears at a random position within rows about 2\u20139 and columns about 2\u20139. - It never touches the outermost row or column.",
+    "guess": "circle",
+    "correct": true,
+    "ambiguous": true,
+    "confidence": 35,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": null,
+   "prompt_sha256": "3bfe78a098d6a146e56b909b39931a77c13e2c72352103c9bbd8bef7194accfb",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 19.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1819,
+    "output": 1628,
+    "reasoning": null
+   },
+   "cost_usd": 0.0398,
+   "score": {
+    "field": "Black backgrounds with a 1-pixel black frame that is always empty. Inside, a white shape sits somewhere in the 10\u00d710 region of rows/columns 1\u201310. My best guess is a filled rectangle or square (or a blob) of varying size, roughly 3\u20138 pixels on a side, at a random position.",
+    "guess": "square",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 30,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "variant": "footprint",
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "thinking_budget": null,
+   "control": null,
+   "prompt_sha256": "7efc8ff7763512bc8d1d69bbf9a7da46531bfda58a796f62babed86e153ef522",
+   "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+   "wall_s": 25.9,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 1819,
+    "output": 2223,
+    "reasoning": null
+   },
+   "cost_usd": 0.0517,
+   "score": {
+    "field": "- A single white, filled, upward-pointing triangle (a pyramid or mountain shape) on a black background, horizontally centred. - The apex is near row 1, columns 5\u20136. The sides slope outward about one pixel every two rows. The base lies around rows 9\u201310 and spans about columns 1\u201310, roughly 10 wide and 9\u201310 tall. - Individual samples probably vary somewhat in size or height within this envelope.",
+    "guess": "triangle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 50,
+    "needs_review": false
+   }
+  }
+ ]
+}

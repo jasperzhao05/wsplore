@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 2,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": null,
+ "prompt_sha256": "3bfe78a098d6a146e56b909b39931a77c13e2c72352103c9bbd8bef7194accfb",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 120.3,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 6914,
+  "reasoning": null
+ },
+ "cost_usd": 0.1811,
+ "score": {
+  "field": "The model generates filled white circles (discs) centered in the 12\u00d712 grid, on a black background. The circles have a radius of approximately 4-5 pixels, filling most of the interior but leaving a 1-2 pixel black border on all sides.",
+  "guess": "circle",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 82,
+  "needs_review": false
+ }
+}

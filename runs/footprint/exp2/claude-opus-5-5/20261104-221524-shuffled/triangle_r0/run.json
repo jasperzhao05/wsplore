@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "thinking_budget": null,
+ "control": "shuffled",
+ "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 33.8,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1819,
+  "output": 3153,
+  "reasoning": null
+ },
+ "cost_usd": 0.0703,
+ "score": {
+  "field": "These are images with no fixed spatial layout, where all pixels play equal roles. My best guess is a small white object (a blob or square a few pixels wide) on a black background, appearing at a different random position in each sample, anywhere on the 12\u00d712 grid. I cannot reliably read a specific shape from this table.",
+  "guess": "square",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 15,
+  "needs_review": false
+ }
+}

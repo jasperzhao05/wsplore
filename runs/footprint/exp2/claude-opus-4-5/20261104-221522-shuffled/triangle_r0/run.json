@@ -1,0 +1,34 @@
+{
+ "exp": 2,
+ "variant": "footprint",
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "claude-opus-4-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-4-5",
+ "reasoning_effort": "high",
+ "thinking_budget": 32000,
+ "control": "shuffled",
+ "prompt_sha256": "5819a66b34f03d479295b833e7911c32f106138c389c7c20650c0539242a4809",
+ "template_sha256": "5a2df3772553820d67f8b95ac8926e04f1394e4db74d93436290ae4dc367ed9f",
+ "wall_s": 211.2,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1643,
+  "output": 12982,
+  "reasoning": null
+ },
+ "cost_usd": 0.3328,
+ "score": {
+  "field": "The model generates images containing a diagonal line or stripe running from the upper-right toward the lower-left. The upper-left corner region (around row 2-4, columns 2-4) remains consistently black/empty. The line appears predominantly in the lower-right and upper-right regions with some variation in exact position.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 42,
+  "needs_review": true
+ }
+}
