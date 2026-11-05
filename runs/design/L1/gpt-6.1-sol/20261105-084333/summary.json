@@ -1,0 +1,222 @@
+{
+ "summary": {
+  "scores": [
+   502.806,
+   502.88,
+   503.193
+  ],
+  "agreement": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "cost_usd": 0.5929
+ },
+ "runs": [
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L1",
+   "game": "breakout",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "xhigh",
+   "thinking_budget": null,
+   "prompt_sha256": "d441e364fc9ace77630e2bf95acc7dc21ac78a679c09ad3bf79a4ca17762ee8f",
+   "wall_s": 319.3,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 2708,
+    "output": 17521,
+    "reasoning": 13837
+   },
+   "cost_usd": 0.1806,
+   "edits": {
+    "block": true,
+    "statements": 85,
+    "applied": 85,
+    "entries_written": 853,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 743,
+     "b1": 0,
+     "W2": 24,
+     "b2": 8,
+     "W3": 8,
+     "b3": 6
+    },
+    "nonzero_total": 789,
+    "max_abs": {
+     "W1": 76.0,
+     "b1": 0.0,
+     "W2": 80.0,
+     "b2": 177.5,
+     "W3": 30.0,
+     "b3": 120.0
+    }
+   },
+   "eval": {
+    "mean": 502.806,
+    "se": 7.74605808006755,
+    "episodes": 1000,
+    "max": 821.0,
+    "mean_length": 7188.392
+   },
+   "agreement": {
+    "argmax": 1.0,
+    "sampled": 0.9999999999998643,
+    "states": 19783
+   }
+  },
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L1",
+   "game": "breakout",
+   "rep": 1,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "xhigh",
+   "thinking_budget": null,
+   "prompt_sha256": "d441e364fc9ace77630e2bf95acc7dc21ac78a679c09ad3bf79a4ca17762ee8f",
+   "wall_s": 312.4,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 2708,
+    "output": 16370,
+    "reasoning": 13036
+   },
+   "cost_usd": 0.1691,
+   "edits": {
+    "block": true,
+    "statements": 87,
+    "applied": 87,
+    "entries_written": 890,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 779,
+     "b1": 0,
+     "W2": 24,
+     "b2": 8,
+     "W3": 8,
+     "b3": 6
+    },
+    "nonzero_total": 825,
+    "max_abs": {
+     "W1": 72.0,
+     "b1": 0.0,
+     "W2": 32.0,
+     "b2": 84.0,
+     "W3": 40.0,
+     "b3": 160.0
+    }
+   },
+   "eval": {
+    "mean": 502.88,
+    "se": 7.747379136423071,
+    "episodes": 1000,
+    "max": 821.0,
+    "mean_length": 7188.392
+   },
+   "agreement": {
+    "argmax": 1.0,
+    "sampled": 1.0,
+    "states": 19783
+   }
+  },
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L1",
+   "game": "breakout",
+   "rep": 2,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "xhigh",
+   "thinking_budget": null,
+   "prompt_sha256": "d441e364fc9ace77630e2bf95acc7dc21ac78a679c09ad3bf79a4ca17762ee8f",
+   "wall_s": 439.5,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 2708,
+    "output": 23780,
+    "reasoning": 19556
+   },
+   "cost_usd": 0.2432,
+   "edits": {
+    "block": true,
+    "statements": 91,
+    "applied": 91,
+    "entries_written": 1088,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b1",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 968,
+     "b1": 4,
+     "W2": 44,
+     "b2": 12,
+     "W3": 12,
+     "b3": 6
+    },
+    "nonzero_total": 1046,
+    "max_abs": {
+     "W1": 720.0,
+     "b1": 30.0,
+     "W2": 40.0,
+     "b2": 62.79999923706055,
+     "W3": 32.0,
+     "b3": 192.0
+    }
+   },
+   "eval": {
+    "mean": 503.193,
+    "se": 7.742307348205319,
+    "episodes": 1000,
+    "max": 821.0,
+    "mean_length": 7192.726
+   },
+   "agreement": {
+    "argmax": 1.0,
+    "sampled": 0.9999999956846694,
+    "states": 19783
+   }
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+9 calls to gpt-6.1-sol
+L0 gpt-6.1-sol          r2  score=378.507  agreement=0.7909316079462164  edits 104/104  tokens={'input': 2616, 'output': 16916, 'reasoning': 14348}  359.4s  finish=stop
+L0 gpt-6.1-sol          r1  score=602.781  agreement=0.9460142546630945  edits 225/225  tokens={'input': 2616, 'output': 30118, 'reasoning': 24512}  546.4s  finish=stop
+L0 gpt-6.1-sol          r0  score=480.268  agreement=0.7827427589344387  edits 173/173  tokens={'input': 2616, 'output': 34776, 'reasoning': 30284}  676.0s  finish=stop
+L1 gpt-6.1-sol          r0  score=502.806  agreement=1.0  edits 85/85  tokens={'input': 2708, 'output': 17521, 'reasoning': 13837}  319.3s  finish=stop
+L1 gpt-6.1-sol          r1  score=502.88  agreement=1.0  edits 87/87  tokens={'input': 2708, 'output': 16370, 'reasoning': 13036}  312.4s  finish=stop
+L2 gpt-6.1-sol          r0  score=502.806  agreement=1.0  edits 92/92  tokens={'input': 4412, 'output': 16261, 'reasoning': 12299}  274.5s  finish=stop
+L1 gpt-6.1-sol          r2  score=503.193  agreement=1.0  edits 91/91  tokens={'input': 2708, 'output': 23780, 'reasoning': 19556}  439.5s  finish=stop
+L2 gpt-6.1-sol          r1  score=502.88  agreement=1.0  edits 92/92  tokens={'input': 4412, 'output': 15974, 'reasoning': 12047}  263.2s  finish=stop
+L2 gpt-6.1-sol          r2  score=502.88  agreement=1.0  edits 92/92  tokens={'input': 4412, 'output': 14707, 'reasoning': 10834}  253.0s  finish=stop
+L0 gpt-6.1-sol: {"scores": [480.268, 602.781, 378.507], "agreement": [0.7827427589344387, 0.9460142546630945, 0.7909316079462164], "cost_usd": 0.8338}
+L1 gpt-6.1-sol: {"scores": [502.806, 502.88, 503.193], "agreement": [1.0, 1.0, 1.0], "cost_usd": 0.5929}
+L2 gpt-6.1-sol: {"scores": [502.806, 502.88, 502.88], "agreement": [1.0, 1.0, 1.0], "cost_usd": 0.4959}
+
+[exited with code 0]

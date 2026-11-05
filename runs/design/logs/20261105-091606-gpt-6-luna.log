@@ -1,0 +1,15 @@
+9 calls to gpt-6-luna
+L0 gpt-6-luna           r0  score=6.427  agreement=0.207450841631704  edits 18/18  tokens={'input': 2616, 'output': 16424, 'reasoning': 15401}  170.6s  finish=stop
+L0 gpt-6-luna           r2  score=2.704  agreement=0.17307789516251326  edits 118/118  tokens={'input': 2616, 'output': 34043, 'reasoning': 31607}  344.5s  finish=stop
+L0 gpt-6-luna           r1  score=0.007  agreement=0.1510893191123692  edits 189/189  tokens={'input': 2616, 'output': 42489, 'reasoning': 38785}  420.7s  finish=stop
+L1 gpt-6-luna           r0  score=6.256  agreement=0.7412424809179599  edits 90/90  tokens={'input': 2708, 'output': 35440, 'reasoning': 31377}  338.7s  finish=stop
+L1 gpt-6-luna           r1  score=6.85  agreement=0.7757165242885306  edits 58/58  tokens={'input': 2708, 'output': 47610, 'reasoning': 43689}  426.0s  finish=stop
+L1 gpt-6-luna           r2  score=5.019  agreement=0.7802658848506293  edits 89/89  tokens={'input': 2708, 'output': 38994, 'reasoning': 35759}  411.7s  finish=stop
+L2 gpt-6-luna           r0  score=0.0  agreement=0.27538795935904564  edits 93/93  tokens={'input': 4412, 'output': 42191, 'reasoning': 38776}  433.1s  finish=stop
+L2 gpt-6-luna           r1  score=13.783  agreement=0.7345195369761917  edits 92/92  tokens={'input': 4412, 'output': 35365, 'reasoning': 31762}  314.6s  finish=stop
+L2 gpt-6-luna           r2  score=10.748  agreement=0.6398422888338472  edits 92/92  tokens={'input': 4412, 'output': 45151, 'reasoning': 41552}  383.5s  finish=stop
+L0 gpt-6-luna: {"scores": [6.427, 0.007, 2.704], "agreement": [0.207450841631704, 0.1510893191123692, 0.17307789516251326], "cost_usd": 0.0473}
+L1 gpt-6-luna: {"scores": [6.256, 6.85, 5.019], "agreement": [0.7412424809179599, 0.7757165242885306, 0.7802658848506293], "cost_usd": 0.0619}
+L2 gpt-6-luna: {"scores": [0.0, 13.783, 10.748], "agreement": [0.27538795935904564, 0.7345195369761917, 0.6398422888338472], "cost_usd": 0.0626}
+
+[exited with code 0]

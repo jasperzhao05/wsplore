@@ -1,0 +1,31 @@
+{
+ "id": "chatcmpl-EggNED0vrIDuWbtm9KIKOQJ93ZaB4",
+ "model": "gpt-6-luna",
+ "streamed": true,
+ "usage": {
+  "prompt_tokens": 2616,
+  "completion_tokens": 16424,
+  "total_tokens": 19040,
+  "prompt_tokens_details": {
+   "cached_tokens": 2613,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 15401,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0,
+   "rejected_prediction_tokens": 0
+  }
+ },
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "The first hidden layer encodes the ball\u2019s and paddle\u2019s centered horizontal positions. The second layer computes their signed difference: the policy moves toward the ball when they are apart and strongly prefers no-op when aligned. This reactive rule avoids relying on a trajectory estimate that can become misleading after collisions.\n\n```edits\nW1[3:60:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[63:120:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[123:180:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[183:240:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[243:300:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[303:360:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[363:420:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[423:480:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[483:540:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[543:600:6, 0] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW1[540:600:6, 1] = [-0.45, -0.35, -0.25, -0.15, -0.05, 0.05, 0.15, 0.25, 0.35, 0.45]\nW2[0, 0] = 6\nW2[1, 0] = -6\nW3[0, 1] = -20\nW3[0, 3] = 20\nb3[0] = 5\nb3[2] = -8\nb3[4:6] = [-8, -8]\n```"
+   },
+   "finish_reason": "stop"
+  }
+ ]
+}

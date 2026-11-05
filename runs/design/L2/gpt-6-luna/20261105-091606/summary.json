@@ -1,0 +1,224 @@
+{
+ "summary": {
+  "scores": [
+   0.0,
+   13.783,
+   10.748
+  ],
+  "agreement": [
+   0.27538795935904564,
+   0.7345195369761917,
+   0.6398422888338472
+  ],
+  "cost_usd": 0.0626
+ },
+ "runs": [
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L2",
+   "game": "breakout",
+   "rep": 0,
+   "model": "gpt-6-luna",
+   "provider": "openai",
+   "model_id": "gpt-6-luna",
+   "reasoning_effort": "xhigh",
+   "thinking_budget": null,
+   "prompt_sha256": "ec67c454d3b143c3211e0a26940c76958bbc6feea0b00beb99c2e617dbd56643",
+   "wall_s": 433.1,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 4412,
+    "output": 42191,
+    "reasoning": 38776
+   },
+   "cost_usd": 0.0215,
+   "edits": {
+    "block": true,
+    "statements": 93,
+    "applied": 93,
+    "entries_written": 867,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b1",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 776,
+     "b1": 1,
+     "W2": 24,
+     "b2": 8,
+     "W3": 8,
+     "b3": 4
+    },
+    "nonzero_total": 821,
+    "max_abs": {
+     "W1": 54.0,
+     "b1": 3.0,
+     "W2": 8.0,
+     "b2": 17.200000762939453,
+     "W3": 4.0,
+     "b3": 10.0
+    }
+   },
+   "eval": {
+    "mean": 0.0,
+    "se": 0.0,
+    "episodes": 1000,
+    "max": 0.0,
+    "mean_length": 6.0
+   },
+   "agreement": {
+    "argmax": 0.27538795935904564,
+    "sampled": 0.2801695935832644,
+    "states": 19783
+   }
+  },
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L2",
+   "game": "breakout",
+   "rep": 1,
+   "model": "gpt-6-luna",
+   "provider": "openai",
+   "model_id": "gpt-6-luna",
+   "reasoning_effort": "xhigh",
+   "thinking_budget": null,
+   "prompt_sha256": "ec67c454d3b143c3211e0a26940c76958bbc6feea0b00beb99c2e617dbd56643",
+   "wall_s": 314.6,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 4412,
+    "output": 35365,
+    "reasoning": 31762
+   },
+   "cost_usd": 0.0181,
+   "edits": {
+    "block": true,
+    "statements": 92,
+    "applied": 92,
+    "entries_written": 857,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b1",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 778,
+     "b1": 0,
+     "W2": 24,
+     "b2": 8,
+     "W3": 8,
+     "b3": 2
+    },
+    "nonzero_total": 820,
+    "max_abs": {
+     "W1": 44.0,
+     "b1": 0.0,
+     "W2": 5.0,
+     "b2": 12.5,
+     "W3": 10.0,
+     "b3": 38.0
+    }
+   },
+   "eval": {
+    "mean": 13.783,
+    "se": 0.4514129868365383,
+    "episodes": 1000,
+    "max": 100.0,
+    "mean_length": 215.088
+   },
+   "agreement": {
+    "argmax": 0.7345195369761917,
+    "sampled": 0.7479523207068254,
+    "states": 19783
+   }
+  },
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L2",
+   "game": "breakout",
+   "rep": 2,
+   "model": "gpt-6-luna",
+   "provider": "openai",
+   "model_id": "gpt-6-luna",
+   "reasoning_effort": "xhigh",
+   "thinking_budget": null,
+   "prompt_sha256": "ec67c454d3b143c3211e0a26940c76958bbc6feea0b00beb99c2e617dbd56643",
+   "wall_s": 383.5,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 4412,
+    "output": 45151,
+    "reasoning": 41552
+   },
+   "cost_usd": 0.023,
+   "edits": {
+    "block": true,
+    "statements": 92,
+    "applied": 92,
+    "entries_written": 857,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b1",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 759,
+     "b1": 0,
+     "W2": 24,
+     "b2": 8,
+     "W3": 8,
+     "b3": 5
+    },
+    "nonzero_total": 804,
+    "max_abs": {
+     "W1": 20.0,
+     "b1": 0.0,
+     "W2": 2.5,
+     "b2": 6.0,
+     "W3": 5.0,
+     "b3": 20.0
+    }
+   },
+   "eval": {
+    "mean": 10.748,
+    "se": 0.32688124349272074,
+    "episodes": 1000,
+    "max": 71.0,
+    "mean_length": 135.924
+   },
+   "agreement": {
+    "argmax": 0.6398422888338472,
+    "sampled": 0.6042668933392772,
+    "states": 19783
+   }
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "exp": 5,
+ "variant": "design",
+ "level": "L0",
+ "game": "breakout",
+ "rep": 2,
+ "model": "gpt-6-luna",
+ "provider": "openai",
+ "model_id": "gpt-6-luna",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "766ee251d59a7893ed86d5eaea99ddb847529ab2092afc69f90f55fb0a22e876",
+ "wall_s": 344.5,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 2616,
+  "output": 34043,
+  "reasoning": 31607
+ },
+ "cost_usd": 0.0173,
+ "edits": {
+  "block": true,
+  "statements": 118,
+  "applied": 118,
+  "entries_written": 867,
+  "errors": [],
+  "cut_off": false,
+  "tensors_touched": [
+   "W1",
+   "W2",
+   "W3",
+   "b1",
+   "b2",
+   "b3"
+  ],
+  "nonzero": {
+   "W1": 680,
+   "b1": 12,
+   "W2": 104,
+   "b2": 22,
+   "W3": 40,
+   "b3": 5
+  },
+  "nonzero_total": 863,
+  "max_abs": {
+   "W1": 18.0,
+   "b1": 2.0,
+   "W2": 4.0,
+   "b2": 6.5,
+   "W3": 84.0,
+   "b3": 10.0
+  }
+ },
+ "eval": {
+  "mean": 2.704,
+  "se": 0.05185627322776939,
+  "episodes": 1000,
+  "max": 12.0,
+  "mean_length": 34.874
+ },
+ "agreement": {
+  "argmax": 0.17307789516251326,
+  "sampled": 0.24453621100264084,
+  "states": 19783
+ }
+}

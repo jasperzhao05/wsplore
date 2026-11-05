@@ -1,0 +1,81 @@
+{
+ "summary": {
+  "scores": [
+   0.534
+  ],
+  "agreement": [
+   0.207450841631704
+  ],
+  "cost_usd": 0.9208
+ },
+ "runs": [
+  {
+   "exp": 5,
+   "variant": "design",
+   "level": "L1",
+   "game": "breakout",
+   "rep": 0,
+   "model": "claude-opus-4-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-4-5",
+   "reasoning_effort": "high",
+   "thinking_budget": 48000,
+   "prompt_sha256": "d441e364fc9ace77630e2bf95acc7dc21ac78a679c09ad3bf79a4ca17762ee8f",
+   "wall_s": 444.7,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 3223,
+    "output": 36186,
+    "reasoning": null
+   },
+   "cost_usd": 0.9208,
+   "edits": {
+    "block": true,
+    "statements": 98,
+    "applied": 98,
+    "entries_written": 755,
+    "errors": [],
+    "cut_off": false,
+    "tensors_touched": [
+     "W1",
+     "W2",
+     "W3",
+     "b2",
+     "b3"
+    ],
+    "nonzero": {
+     "W1": 666,
+     "b1": 0,
+     "W2": 14,
+     "b2": 4,
+     "W3": 6,
+     "b3": 1
+    },
+    "nonzero_total": 691,
+    "max_abs": {
+     "W1": 27.0,
+     "b1": 0.0,
+     "W2": 4.0,
+     "b2": 0.4000000059604645,
+     "W3": 3.0,
+     "b3": 0.30000001192092896
+    }
+   },
+   "eval": {
+    "mean": 0.534,
+    "se": 0.023862384906237127,
+    "episodes": 1000,
+    "max": 5.0,
+    "mean_length": 11.394
+   },
+   "agreement": {
+    "argmax": 0.207450841631704,
+    "sampled": 0.2051435159004491,
+    "states": 19783
+   }
+  }
+ ]
+}

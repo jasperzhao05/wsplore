@@ -1,0 +1,11 @@
+4 calls to claude-opus-5-5, claude-opus-4-5
+L2 claude-opus-5-5      r0  score=456.468  agreement=1.0  edits 92/92  tokens={'input': 5871, 'output': 47751, 'reasoning': None}  441.2s  finish=end_turn
+L1 claude-opus-4-5      r0  score=0.534  agreement=0.207450841631704  edits 98/98  tokens={'input': 3223, 'output': 36186, 'reasoning': None}  444.7s  finish=end_turn
+L2 claude-opus-4-5      r0  score=0.074  agreement=0.12424809179598645  edits 92/92  tokens={'input': 5106, 'output': 43604, 'reasoning': None}  556.5s  finish=end_turn
+L1 claude-opus-5-5      r0  score=442.12  agreement=0.996461608451701  edits 131/131  tokens={'input': 3915, 'output': 82119, 'reasoning': None}  740.6s  finish=end_turn
+L1 claude-opus-5-5: {"scores": [442.12], "agreement": [0.996461608451701], "cost_usd": 1.658}
+L1 claude-opus-4-5: {"scores": [0.534], "agreement": [0.207450841631704], "cost_usd": 0.9208}
+L2 claude-opus-5-5: {"scores": [456.468], "agreement": [1.0], "cost_usd": 0.9785}
+L2 claude-opus-4-5: {"scores": [0.074], "agreement": [0.12424809179598645], "cost_usd": 1.1156}
+
+[exited with code 0]
