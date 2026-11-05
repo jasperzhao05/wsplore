@@ -1,10 +1,11 @@
 [project]
-name = "wsp-study"
+name = "wsplore"
 version = "0.1.0"
-description = "Probing what the weight-reading experiments of \"Sparks of Weight-Space Programming\" measure"
+description = "Reading and writing neural-network weights with language models: two follow-ups to Sparks of Weight-Space Programming"
 requires-python = ">=3.13"
 dependencies = [
     "anthropic>=2.4.0",
+    "matplotlib>=3.11.2",
     "minatar==1.0.15",
     "numpy>=2.5.4",
     "pillow>=13.0.0",

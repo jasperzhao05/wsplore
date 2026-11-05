@@ -1,12 +1,17 @@
-"""Render the README animation: three models, each given Astra's design paragraph (L1), play the same Breakout episode.
-Each panel shows whether the network's most likely move matches what Astra's network would do in the same state.
+"""The README figures.
+  footprint   the tables the footprint prompts show, drawn as maps (Exp 1: the five channels of each game's network,
+              plus Breakout's shuffled control; Exp 2: each shape, real and shuffled)
+  gif         three models, each given Astra's design paragraph (L1), play the same Breakout episode; each panel
+              shows whether the network's most likely move matches what Astra's network would do in that state
 
-  uv run make_gif.py                     # writes assets/l1_three_models.gif
+  uv run figures.py                      # writes everything in assets/
+  uv run figures.py footprint
 """
-import glob, os
+import argparse, glob, os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import design as t
+import footprint as fp
 
 exp5 = t.exp5
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -142,7 +147,54 @@ def render(step, runs):
     return img
 
 
-def main():
+GAMES = {"breakout": "Breakout", "freeway": "Freeway", "pacman": "Pac-Man", "pong": "Pong"}
+SHAPES = ("circle", "triangle", "square")
+
+
+def maps(exp, truth, control=None):
+    net_id = next(i for i, name in fp.harness.networks(exp).items() if name == truth)
+    return fp.footprint(exp, fp.weights_text(exp, net_id, control))
+
+
+def footprint_figures():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib import font_manager
+    font_manager.fontManager.addfont("/System/Library/Fonts/SFNS.ttf")
+    plt.rcParams.update({"font.family": "SF Pro", "text.color": FG, "figure.facecolor": BG, "savefig.facecolor": BG})
+
+    def draw(ax, m, lo, hi):
+        ax.imshow(m, cmap="magma", vmin=lo, vmax=hi, interpolation="nearest")
+        ax.set_xticks([]), ax.set_yticks([])
+        for s in ax.spines.values():
+            s.set_color(GRID)
+
+    rows = [(GAMES[g], maps(1, g)) for g in GAMES] + [("Breakout,\nshuffled", maps(1, "breakout", "shuffled"))]
+    fig, axes = plt.subplots(len(rows), 5, figsize=(9, 9.2), gridspec_kw={"wspace": 0.08, "hspace": 0.12})
+    for r, (label, m) in enumerate(rows):
+        for c in range(5):
+            draw(axes[r, c], m[:, :, c], m.min(), m.max())
+            if r == 0:
+                axes[r, c].set_title(fp.EXPS[1]["tables"][c], fontsize=11, color=MUTED, pad=8)
+        axes[r, 0].set_ylabel(label, fontsize=12, color=FG, rotation=0, ha="right", va="center", labelpad=10)
+    fig.savefig(os.path.join(HERE, "assets", "footprint_exp1.png"), dpi=200, bbox_inches="tight", pad_inches=0.25)
+    plt.close(fig)
+
+    fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.2), gridspec_kw={"wspace": 0.08, "hspace": 0.12})
+    for c, shape in enumerate(SHAPES):
+        for r, control in enumerate((None, "shuffled")):
+            m = maps(2, shape, control)[:, :, 0]
+            draw(axes[r, c], m, m.min(), m.max())
+        axes[0, c].set_title(shape, fontsize=12, color=MUTED, pad=8)
+    for r, label in enumerate(("real", "shuffled")):
+        axes[r, 0].set_ylabel(label, fontsize=12, color=FG, rotation=0, ha="right", va="center", labelpad=10)
+    fig.savefig(os.path.join(HERE, "assets", "footprint_exp2.png"), dpi=200, bbox_inches="tight", pad_inches=0.25)
+    plt.close(fig)
+    print("assets/footprint_exp1.png, assets/footprint_exp2.png")
+
+
+def gif():
     astra = exp5.load_npz(t.ASTRA)
     runs = []
     for name, model, rep, mean in PANELS:
@@ -163,6 +215,15 @@ def main():
                    optimize=False)    # no loop count: plays once and stays on the last frame
     print(f"{out}: {len(frames)} frames, {W * S}x{H * S}, {(STEP_MS * (len(frames) - 1) + HOLD_MS) / 1000:.1f}s, "
           f"{os.path.getsize(out) / 1e6:.2f} MB")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    makers = {"footprint": footprint_figures, "gif": gif}
+    ap.add_argument("figures", nargs="*", choices=list(makers), help="default: all")
+    os.makedirs(os.path.join(HERE, "assets"), exist_ok=True)
+    for name in ap.parse_args().figures or makers:
+        makers[name]()
 
 
 if __name__ == "__main__":
