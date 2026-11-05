@@ -1,0 +1,235 @@
+{
+ "summary": {
+  "exp1": {
+   "correct": 1,
+   "total": 4
+  },
+  "exp2": {
+   "correct": 0,
+   "total": 3
+  },
+  "cost_usd": 1.6474,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 6
+ },
+ "runs": [
+  {
+   "exp": 1,
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "da3766d2883ae2baef97c267478157ff031eba3c1bc57afbf3c4e724179e844a",
+   "wall_s": 113.8,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 70239,
+    "output": 5676,
+    "reasoning": 4607
+   },
+   "cost_usd": 0.1972,
+   "score": {
+    "field": "Indeterminate; no reliable specific-game identification from these weights.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 95,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 1,
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "92996f24a3e4e16f0dab1800ca26b12c1ae62afeb48ddc9891e3c53859d0924c",
+   "wall_s": 237.6,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 70243,
+    "output": 11832,
+    "reasoning": 10991
+   },
+   "cost_usd": 0.2588,
+   "score": {
+    "field": "Tentatively, Frogger\u2014a top-to-bottom crossing variant. This is a low-confidence guess rather than a reliable identification.",
+    "guess": "freeway",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 15,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "51560a04c449bf3b82d348b58446933b1703d32fa25d73bf35de62bf3c3db8b3",
+   "wall_s": 235.3,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 70236,
+    "output": 13147,
+    "reasoning": 12110
+   },
+   "cost_usd": 0.2719,
+   "score": {
+    "field": "Not reliably identifiable from the supplied weights. Naming a particular game would be speculation.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 0,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 1,
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "32823f9ca88969229edcff82aa74a00f936d2227292871916ada2d0e48d24193",
+   "wall_s": 147.1,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 70229,
+    "output": 5534,
+    "reasoning": 4585
+   },
+   "cost_usd": 0.1958,
+   "score": {
+    "field": "Not identifiable with defensible specificity from this inspection.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 0,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "d37f8ce643faf83e2f0404b3674ff91fab4727cfe2db81eacfab5b77e5156731",
+   "wall_s": 122.0,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 96307,
+    "output": 4696,
+    "reasoning": 4096
+   },
+   "cost_usd": 0.2396,
+   "score": {
+    "field": "I cannot responsibly identify what is drawn, how large it is, or where it appears. A specific subject would be a guess unsupported by the observations above.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 0,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "d6a46a3192d49619d72bfa33706f3f9cdf085c19822fbc00206cf2e150e62044",
+   "wall_s": 107.6,
+   "attempts": 1,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 96312,
+    "output": 4171,
+    "reasoning": 3584
+   },
+   "cost_usd": 0.2343,
+   "score": {
+    "field": "Not reliably identified. A dark field with variable white marks is a weak possibility, not a supported identification. I cannot substantiate what is drawn, its size, or its position.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 5,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "model_id": "gpt-6.1-sol",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "cf43320d1e7b06a198f1e56f6774b99229bd32339a7877c01ee5c06ed415252b",
+   "wall_s": 216.4,
+   "attempts": 2,
+   "error": null,
+   "finish_reason": "stop",
+   "refused": false,
+   "usage": {
+    "input": 96325,
+    "output": 5713,
+    "reasoning": 5117
+   },
+   "cost_usd": 0.2498,
+   "score": {
+    "field": "I cannot defensibly identify what is drawn, its size, or its location. \u201cScattered white marks on a dark background\u201d is a weak possibility, not a recovered description.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 5,
+    "needs_review": true
+   }
+  }
+ ]
+}

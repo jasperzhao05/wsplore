@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "da3766d2883ae2baef97c267478157ff031eba3c1bc57afbf3c4e724179e844a",
+ "wall_s": 38.9,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 79121,
+  "output": 2948,
+  "reasoning": null
+ },
+ "cost_usd": 0.3754,
+ "score": {
+  "field": "Snake (classic grid Snake).",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 15,
+  "needs_review": true
+ }
+}

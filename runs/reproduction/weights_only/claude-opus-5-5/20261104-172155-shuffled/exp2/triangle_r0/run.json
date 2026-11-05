@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "cf43320d1e7b06a198f1e56f6774b99229bd32339a7877c01ee5c06ed415252b",
+ "wall_s": 155.2,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 109128,
+  "output": 16681,
+  "reasoning": null
+ },
+ "cost_usd": 0.7701,
+ "score": {
+  "field": "I think each image is a black background with one solid white axis-aligned rectangle or bar. The block is moderately large, roughly 3\u20137 pixels on a side, covering about a quarter to a third of the image. Its position varies, so it can appear anywhere including near the edges.",
+  "guess": "square",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 12,
+  "needs_review": false
+ }
+}

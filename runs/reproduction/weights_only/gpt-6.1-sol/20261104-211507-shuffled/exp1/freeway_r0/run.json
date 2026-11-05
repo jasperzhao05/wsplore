@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "0bbcc3ea",
+ "truth": "freeway",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "92996f24a3e4e16f0dab1800ca26b12c1ae62afeb48ddc9891e3c53859d0924c",
+ "wall_s": 237.6,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70243,
+  "output": 11832,
+  "reasoning": 10991
+ },
+ "cost_usd": 0.2588,
+ "score": {
+  "field": "Tentatively, Frogger\u2014a top-to-bottom crossing variant. This is a low-confidence guess rather than a reliable identification.",
+  "guess": "freeway",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 15,
+  "needs_review": false
+ }
+}

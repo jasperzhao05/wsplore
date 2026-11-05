@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "d6a46a3192d49619d72bfa33706f3f9cdf085c19822fbc00206cf2e150e62044",
+ "wall_s": 72.3,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 108858,
+  "output": 6995,
+  "reasoning": null
+ },
+ "cost_usd": 0.5753,
+ "score": {
+  "field": "- Mostly black 12\u00d712 images with scattered white pixels and small white clusters spread over the whole grid. - Roughly 30\u201340% of pixels are white. - They have no coherent single object, outline or centred shape. They look more like fixed noise-like binary textures, likely a few memorised patterns.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 12,
+  "needs_review": true
+ }
+}

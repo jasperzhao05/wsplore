@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "d37f8ce643faf83e2f0404b3674ff91fab4727cfe2db81eacfab5b77e5156731",
+ "wall_s": 122.0,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 96307,
+  "output": 4696,
+  "reasoning": 4096
+ },
+ "cost_usd": 0.2396,
+ "score": {
+  "field": "I cannot responsibly identify what is drawn, how large it is, or where it appears. A specific subject would be a guess unsupported by the observations above.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 0,
+  "needs_review": true
+ }
+}

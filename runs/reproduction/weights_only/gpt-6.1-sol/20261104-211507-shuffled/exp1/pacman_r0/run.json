@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "bdf99279",
+ "truth": "pacman",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "51560a04c449bf3b82d348b58446933b1703d32fa25d73bf35de62bf3c3db8b3",
+ "wall_s": 235.3,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70236,
+  "output": 13147,
+  "reasoning": 12110
+ },
+ "cost_usd": 0.2719,
+ "score": {
+  "field": "Not reliably identifiable from the supplied weights. Naming a particular game would be speculation.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 0,
+  "needs_review": true
+ }
+}

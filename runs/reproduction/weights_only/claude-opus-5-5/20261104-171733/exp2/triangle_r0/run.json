@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "d8533653617af859a80f105b8a6360efbf7331be41f85f97212b75fcc63da897",
+ "wall_s": 112.4,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 109128,
+  "output": 11743,
+  "reasoning": null
+ },
+ "cost_usd": 0.6714,
+ "score": {
+  "field": "- Each image is a single solid white triangle pointing upward, on a black background, roughly centred horizontally. - The apex is near the top centre, around row 1\u20133 and column 5\u20136. - The base is a horizontal edge somewhere between row 6 and row 10. It typically spans about 6\u201310 pixels, reaching columns 1\u20132 on the left and 9\u201310 on the right. - The triangle is about 5\u20139 pixels tall and 6\u201310 pixels wide at the base. Size and steepness vary between samples. - Row 0, columns 0 and 11, and usually row 11 stay black.",
+  "guess": "triangle",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 62,
+  "needs_review": false
+ }
+}

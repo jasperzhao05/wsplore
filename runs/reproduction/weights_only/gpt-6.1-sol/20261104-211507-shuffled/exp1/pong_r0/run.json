@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "dfc6cb65",
+ "truth": "pong",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "32823f9ca88969229edcff82aa74a00f936d2227292871916ada2d0e48d24193",
+ "wall_s": 147.1,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70229,
+  "output": 5534,
+  "reasoning": 4585
+ },
+ "cost_usd": 0.1958,
+ "score": {
+  "field": "Not identifiable with defensible specificity from this inspection.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 0,
+  "needs_review": true
+ }
+}

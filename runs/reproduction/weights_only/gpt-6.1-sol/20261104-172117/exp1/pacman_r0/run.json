@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "bdf99279",
+ "truth": "pacman",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "1c75e66aab1e611bdb07a87d6f70e3d2ba3d149e58f259b5ad7a485661244acf",
+ "wall_s": 149.6,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70243,
+  "output": 8152,
+  "reasoning": 7019
+ },
+ "cost_usd": 0.222,
+ "score": {
+  "field": "A miniature, fixed-maze Pac-Man variant.",
+  "guess": "pacman",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 95,
+  "needs_review": false
+ }
+}

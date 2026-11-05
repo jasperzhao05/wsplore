@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "fbb9f8b4b1b63dd4460d7168159b135b1420e70e24bcddd00f986e191f417172",
+ "wall_s": 159.5,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 96309,
+  "output": 7975,
+  "reasoning": 7168
+ },
+ "cost_usd": 0.2724,
+ "score": {
+  "field": "Most likely, a single thin white rectangular frame on a black background, with black inside. Its width, height, and position vary; it need not be square. The frame is several pixels across and tall, sometimes occupying much of the inner 10 \u00d7 10 area, with approximately one-pixel strokes and possibly softened edges.",
+  "guess": "square",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 79,
+  "needs_review": false
+ }
+}

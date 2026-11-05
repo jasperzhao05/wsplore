@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "dfc6cb65",
+ "truth": "pong",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "1b143ac2f46ab7a0c4b3eb45bd2b9d82314c3b24e2d2412f80566946c935c5ba",
+ "wall_s": 95.6,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 78912,
+  "output": 10085,
+  "reasoning": null
+ },
+ "cost_usd": 0.5173,
+ "score": {
+  "field": "Pong, as a single-player Pong/squash variant. A left-side paddle defends against a bouncing ball, and the right wall is the scoring goal.",
+  "guess": "pong",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 72,
+  "needs_review": false
+ }
+}

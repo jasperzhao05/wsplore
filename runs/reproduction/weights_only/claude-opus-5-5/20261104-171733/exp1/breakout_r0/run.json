@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "ba1d97cfcb585f0ccab628ed1ef983b230d897b97ae6ff10f2de6eac6d390b31",
+ "wall_s": 134.2,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 79121,
+  "output": 14721,
+  "reasoning": null
+ },
+ "cost_usd": 0.6109,
+ "score": {
+  "field": "Breakout (a mini Atari Breakout / brick\u2011breaker on an 8\u00d78 field).",
+  "guess": "breakout",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 70,
+  "needs_review": false
+ }
+}

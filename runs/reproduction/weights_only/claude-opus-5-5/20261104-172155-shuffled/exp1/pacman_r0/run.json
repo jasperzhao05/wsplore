@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "bdf99279",
+ "truth": "pacman",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "51560a04c449bf3b82d348b58446933b1703d32fa25d73bf35de62bf3c3db8b3",
+ "wall_s": 64.3,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 79037,
+  "output": 6376,
+  "reasoning": null
+ },
+ "cost_usd": 0.4437,
+ "score": {
+  "field": "A Freeway/Frogger-style road-crossing game, closest to Atari Freeway (chicken crossing the road).",
+  "guess": "freeway",
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 15,
+  "needs_review": false
+ }
+}

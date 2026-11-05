@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "f02e93fcdb15177695684005f4345a6f9fc94d9925ad6c0fe69545203676693b",
+ "wall_s": 231.2,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 96311,
+  "output": 10130,
+  "reasoning": 9384
+ },
+ "cost_usd": 0.2939,
+ "score": {
+  "field": "Most likely, one white circular outline or slightly elliptical ring on a black background. It is generally near the center, with size and placement varying. The larger examples span roughly rows and columns 1\u201310; a typical loop would be around 6\u201310 pixels across, with a rim approximately 1\u20132 pixels thick and possibly gray edge pixels.",
+  "guess": "circle",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 75,
+  "needs_review": false
+ }
+}

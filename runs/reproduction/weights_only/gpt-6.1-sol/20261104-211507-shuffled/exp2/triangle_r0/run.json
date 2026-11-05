@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "cf43320d1e7b06a198f1e56f6774b99229bd32339a7877c01ee5c06ed415252b",
+ "wall_s": 216.4,
+ "attempts": 2,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 96325,
+  "output": 5713,
+  "reasoning": 5117
+ },
+ "cost_usd": 0.2498,
+ "score": {
+  "field": "I cannot defensibly identify what is drawn, its size, or its location. \u201cScattered white marks on a dark background\u201d is a weak possibility, not a recovered description.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 5,
+  "needs_review": true
+ }
+}

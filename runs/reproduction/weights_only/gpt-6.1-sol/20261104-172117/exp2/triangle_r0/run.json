@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "246a5b58",
+ "truth": "triangle",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "d8533653617af859a80f105b8a6360efbf7331be41f85f97212b75fcc63da897",
+ "wall_s": 153.2,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 96293,
+  "output": 7600,
+  "reasoning": 6654
+ },
+ "cost_usd": 0.2686,
+ "score": {
+  "field": "A single white, upward-pointing triangular outline on a black background.",
+  "guess": "triangle",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 90,
+  "needs_review": false
+ }
+}

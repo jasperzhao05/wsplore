@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "dfc6cb65",
+ "truth": "pong",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "1b143ac2f46ab7a0c4b3eb45bd2b9d82314c3b24e2d2412f80566946c935c5ba",
+ "wall_s": 84.4,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70243,
+  "output": 4136,
+  "reasoning": 3054
+ },
+ "cost_usd": 0.1818,
+ "score": {
+  "field": "Pong\u2014a grid-based version with a vertically controlled paddle on the left, possibly a simplified single-paddle variant.",
+  "guess": "pong",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 97,
+  "needs_review": false
+ }
+}

@@ -1,0 +1,235 @@
+{
+ "summary": {
+  "exp1": {
+   "correct": 4,
+   "total": 4
+  },
+  "exp2": {
+   "correct": 3,
+   "total": 3
+  },
+  "cost_usd": 4.2225,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 0
+ },
+ "runs": [
+  {
+   "exp": 1,
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "ba1d97cfcb585f0ccab628ed1ef983b230d897b97ae6ff10f2de6eac6d390b31",
+   "wall_s": 134.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 79121,
+    "output": 14721,
+    "reasoning": null
+   },
+   "cost_usd": 0.6109,
+   "score": {
+    "field": "Breakout (a mini Atari Breakout / brick\u2011breaker on an 8\u00d78 field).",
+    "guess": "breakout",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 70,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "76f30db2c4591e340f4a8e1ca56abdfdf6aa9857e3220936ca178f86c29e6070",
+   "wall_s": 124.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 78902,
+    "output": 13426,
+    "reasoning": null
+   },
+   "cost_usd": 0.5841,
+   "score": {
+    "field": "Freeway, the Atari/MinAtar chicken road-crossing game; Frogger-style lane crossing.",
+    "guess": "freeway",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "1c75e66aab1e611bdb07a87d6f70e3d2ba3d149e58f259b5ad7a485661244acf",
+   "wall_s": 79.5,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 79037,
+    "output": 8939,
+    "reasoning": null
+   },
+   "cost_usd": 0.4949,
+   "score": {
+    "field": "A Pac-Man-style maze game on a fixed symmetric maze, with ghosts and pellets.",
+    "guess": "pacman",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 65,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "1b143ac2f46ab7a0c4b3eb45bd2b9d82314c3b24e2d2412f80566946c935c5ba",
+   "wall_s": 95.6,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 78912,
+    "output": 10085,
+    "reasoning": null
+   },
+   "cost_usd": 0.5173,
+   "score": {
+    "field": "Pong, as a single-player Pong/squash variant. A left-side paddle defends against a bouncing ball, and the right wall is the scoring goal.",
+    "guess": "pong",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 72,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "f02e93fcdb15177695684005f4345a6f9fc94d9925ad6c0fe69545203676693b",
+   "wall_s": 90.1,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 108560,
+    "output": 8763,
+    "reasoning": null
+   },
+   "cost_usd": 0.6095,
+   "score": {
+    "field": "Each image is a single thin white circle (ring) outline on a black background. It is roughly 5 to 10 pixels across and sits somewhat off-centre at random. It always lies within rows and columns 1\u201310, so the outer frame stays black. The inside of the ring is black.",
+    "guess": "circle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 55,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "fbb9f8b4b1b63dd4460d7168159b135b1420e70e24bcddd00f986e191f417172",
+   "wall_s": 148.6,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 108858,
+    "output": 14947,
+    "reasoning": null
+   },
+   "cost_usd": 0.7344,
+   "score": {
+    "field": "A single solid white axis-aligned rectangle on a black background. It sits somewhere inside the inner 10\u00d710 area (rows 1\u201310, cols 1\u201310), and the outermost ring of pixels stays black. Its size and position vary from image to image: from small blocks of about 3\u20134 pixels up to nearly the full 10\u00d710 interior, and not necessarily square.",
+    "guess": "square",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 50,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 2,
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": null,
+   "prompt_sha256": "d8533653617af859a80f105b8a6360efbf7331be41f85f97212b75fcc63da897",
+   "wall_s": 112.4,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 109128,
+    "output": 11743,
+    "reasoning": null
+   },
+   "cost_usd": 0.6714,
+   "score": {
+    "field": "- Each image is a single solid white triangle pointing upward, on a black background, roughly centred horizontally. - The apex is near the top centre, around row 1\u20133 and column 5\u20136. - The base is a horizontal edge somewhere between row 6 and row 10. It typically spans about 6\u201310 pixels, reaching columns 1\u20132 on the left and 9\u201310 on the right. - The triangle is about 5\u20139 pixels tall and 6\u201310 pixels wide at the base. Size and steepness vary between samples. - Row 0, columns 0 and 11, and usually row 11 stay black.",
+    "guess": "triangle",
+    "correct": true,
+    "ambiguous": false,
+    "confidence": 62,
+    "needs_review": false
+   }
+  }
+ ]
+}

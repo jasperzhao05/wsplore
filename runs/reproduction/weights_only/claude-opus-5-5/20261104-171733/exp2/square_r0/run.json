@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "fbb9f8b4b1b63dd4460d7168159b135b1420e70e24bcddd00f986e191f417172",
+ "wall_s": 148.6,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 108858,
+  "output": 14947,
+  "reasoning": null
+ },
+ "cost_usd": 0.7344,
+ "score": {
+  "field": "A single solid white axis-aligned rectangle on a black background. It sits somewhere inside the inner 10\u00d710 area (rows 1\u201310, cols 1\u201310), and the outermost ring of pixels stays black. Its size and position vary from image to image: from small blocks of about 3\u20134 pixels up to nearly the full 10\u00d710 interior, and not necessarily square.",
+  "guess": "square",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 50,
+  "needs_review": false
+ }
+}

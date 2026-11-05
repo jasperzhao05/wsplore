@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "dfc6cb65",
+ "truth": "pong",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "32823f9ca88969229edcff82aa74a00f936d2227292871916ada2d0e48d24193",
+ "wall_s": 31.1,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 78912,
+  "output": 2344,
+  "reasoning": null
+ },
+ "cost_usd": 0.3625,
+ "score": {
+  "field": "Snake (grid snake game); low confidence.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 15,
+  "needs_review": true
+ }
+}

@@ -1,0 +1,235 @@
+{
+ "summary": {
+  "exp1": {
+   "correct": 0,
+   "total": 4
+  },
+  "exp2": {
+   "correct": 0,
+   "total": 3
+  },
+  "cost_usd": 3.7664,
+  "refusals": 0,
+  "errors": 0,
+  "needs_review": 5
+ },
+ "runs": [
+  {
+   "exp": 1,
+   "network": "a9f535cc",
+   "truth": "breakout",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "da3766d2883ae2baef97c267478157ff031eba3c1bc57afbf3c4e724179e844a",
+   "wall_s": 38.9,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 79121,
+    "output": 2948,
+    "reasoning": null
+   },
+   "cost_usd": 0.3754,
+   "score": {
+    "field": "Snake (classic grid Snake).",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 15,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 1,
+   "network": "0bbcc3ea",
+   "truth": "freeway",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "92996f24a3e4e16f0dab1800ca26b12c1ae62afeb48ddc9891e3c53859d0924c",
+   "wall_s": 31.7,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 78902,
+    "output": 2504,
+    "reasoning": null
+   },
+   "cost_usd": 0.3657,
+   "score": {
+    "field": "Catch (falling-fruit / paddle catch game on a grid; similar to the classic \"Catch\" RL benchmark).",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 25,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 1,
+   "network": "bdf99279",
+   "truth": "pacman",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "51560a04c449bf3b82d348b58446933b1703d32fa25d73bf35de62bf3c3db8b3",
+   "wall_s": 64.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 79037,
+    "output": 6376,
+    "reasoning": null
+   },
+   "cost_usd": 0.4437,
+   "score": {
+    "field": "A Freeway/Frogger-style road-crossing game, closest to Atari Freeway (chicken crossing the road).",
+    "guess": "freeway",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 15,
+    "needs_review": false
+   }
+  },
+  {
+   "exp": 1,
+   "network": "dfc6cb65",
+   "truth": "pong",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "32823f9ca88969229edcff82aa74a00f936d2227292871916ada2d0e48d24193",
+   "wall_s": 31.1,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 78912,
+    "output": 2344,
+    "reasoning": null
+   },
+   "cost_usd": 0.3625,
+   "score": {
+    "field": "Snake (grid snake game); low confidence.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 15,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "network": "d88aba69",
+   "truth": "circle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "d37f8ce643faf83e2f0404b3674ff91fab4727cfe2db81eacfab5b77e5156731",
+   "wall_s": 193.9,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 108560,
+    "output": 21972,
+    "reasoning": null
+   },
+   "cost_usd": 0.8737,
+   "score": {
+    "field": "- Full-frame 12\u00d712 binary-looking patterns: an irregular, speckled mix of white and black pixels spread over the whole grid, roughly half white. - There is no single object, no fixed border and no smooth stroke. - Each sample should reproduce one of a few fixed patterns that the network memorized, rather than a new geometric shape.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 12,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "network": "a6a9dfb7",
+   "truth": "square",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "d6a46a3192d49619d72bfa33706f3f9cdf085c19822fbc00206cf2e150e62044",
+   "wall_s": 72.3,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 108858,
+    "output": 6995,
+    "reasoning": null
+   },
+   "cost_usd": 0.5753,
+   "score": {
+    "field": "- Mostly black 12\u00d712 images with scattered white pixels and small white clusters spread over the whole grid. - Roughly 30\u201340% of pixels are white. - They have no coherent single object, outline or centred shape. They look more like fixed noise-like binary textures, likely a few memorised patterns.",
+    "guess": null,
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 12,
+    "needs_review": true
+   }
+  },
+  {
+   "exp": 2,
+   "network": "246a5b58",
+   "truth": "triangle",
+   "rep": 0,
+   "model": "claude-opus-5-5",
+   "provider": "anthropic",
+   "model_id": "claude-opus-5-5",
+   "reasoning_effort": "high",
+   "control": "shuffled",
+   "prompt_sha256": "cf43320d1e7b06a198f1e56f6774b99229bd32339a7877c01ee5c06ed415252b",
+   "wall_s": 155.2,
+   "attempts": null,
+   "error": null,
+   "finish_reason": "end_turn",
+   "refused": false,
+   "usage": {
+    "input": 109128,
+    "output": 16681,
+    "reasoning": null
+   },
+   "cost_usd": 0.7701,
+   "score": {
+    "field": "I think each image is a black background with one solid white axis-aligned rectangle or bar. The block is moderately large, roughly 3\u20137 pixels on a side, covering about a quarter to a third of the image. Its position varies, so it can appear anywhere including near the edges.",
+    "guess": "square",
+    "correct": false,
+    "ambiguous": false,
+    "confidence": 12,
+    "needs_review": false
+   }
+  }
+ ]
+}

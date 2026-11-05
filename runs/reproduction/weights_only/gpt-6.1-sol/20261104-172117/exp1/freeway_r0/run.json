@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "0bbcc3ea",
+ "truth": "freeway",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "76f30db2c4591e340f4a8e1ca56abdfdf6aa9857e3220936ca178f86c29e6070",
+ "wall_s": 200.4,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70215,
+  "output": 9056,
+  "reasoning": 8174
+ },
+ "cost_usd": 0.231,
+ "score": {
+  "field": "Frogger \u2014 a grid-based, likely road-only traffic-crossing variant.",
+  "guess": "freeway",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 96,
+  "needs_review": false
+ }
+}

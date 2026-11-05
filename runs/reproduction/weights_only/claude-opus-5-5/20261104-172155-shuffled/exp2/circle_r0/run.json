@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "d88aba69",
+ "truth": "circle",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "d37f8ce643faf83e2f0404b3674ff91fab4727cfe2db81eacfab5b77e5156731",
+ "wall_s": 193.9,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 108560,
+  "output": 21972,
+  "reasoning": null
+ },
+ "cost_usd": 0.8737,
+ "score": {
+  "field": "- Full-frame 12\u00d712 binary-looking patterns: an irregular, speckled mix of white and black pixels spread over the whole grid, roughly half white. - There is no single object, no fixed border and no smooth stroke. - Each sample should reproduce one of a few fixed patterns that the network memorized, rather than a new geometric shape.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 12,
+  "needs_review": true
+ }
+}

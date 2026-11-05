@@ -1,0 +1,31 @@
+{
+ "exp": 2,
+ "network": "a6a9dfb7",
+ "truth": "square",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "d6a46a3192d49619d72bfa33706f3f9cdf085c19822fbc00206cf2e150e62044",
+ "wall_s": 107.6,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 96312,
+  "output": 4171,
+  "reasoning": 3584
+ },
+ "cost_usd": 0.2343,
+ "score": {
+  "field": "Not reliably identified. A dark field with variable white marks is a weak possibility, not a supported identification. I cannot substantiate what is drawn, its size, or its position.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 5,
+  "needs_review": true
+ }
+}

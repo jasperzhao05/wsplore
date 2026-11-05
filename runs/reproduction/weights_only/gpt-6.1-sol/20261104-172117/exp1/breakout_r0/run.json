@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": null,
+ "prompt_sha256": "ba1d97cfcb585f0ccab628ed1ef983b230d897b97ae6ff10f2de6eac6d390b31",
+ "wall_s": 119.0,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70269,
+  "output": 8245,
+  "reasoning": 7104
+ },
+ "cost_usd": 0.223,
+ "score": {
+  "field": "Breakout \u2014 an 8 \u00d7 8 grid-based brick-breaker.",
+  "guess": "breakout",
+  "correct": true,
+  "ambiguous": false,
+  "confidence": 98,
+  "needs_review": false
+ }
+}

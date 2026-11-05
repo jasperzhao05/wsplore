@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "a9f535cc",
+ "truth": "breakout",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "da3766d2883ae2baef97c267478157ff031eba3c1bc57afbf3c4e724179e844a",
+ "wall_s": 113.8,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 70239,
+  "output": 5676,
+  "reasoning": 4607
+ },
+ "cost_usd": 0.1972,
+ "score": {
+  "field": "Indeterminate; no reliable specific-game identification from these weights.",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 95,
+  "needs_review": true
+ }
+}

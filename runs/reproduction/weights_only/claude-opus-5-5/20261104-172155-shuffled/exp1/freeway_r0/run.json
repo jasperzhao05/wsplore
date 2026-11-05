@@ -1,0 +1,31 @@
+{
+ "exp": 1,
+ "network": "0bbcc3ea",
+ "truth": "freeway",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "high",
+ "control": "shuffled",
+ "prompt_sha256": "92996f24a3e4e16f0dab1800ca26b12c1ae62afeb48ddc9891e3c53859d0924c",
+ "wall_s": 31.7,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 78902,
+  "output": 2504,
+  "reasoning": null
+ },
+ "cost_usd": 0.3657,
+ "score": {
+  "field": "Catch (falling-fruit / paddle catch game on a grid; similar to the classic \"Catch\" RL benchmark).",
+  "guess": null,
+  "correct": false,
+  "ambiguous": false,
+  "confidence": 25,
+  "needs_review": true
+ }
+}
