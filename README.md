@@ -132,9 +132,13 @@ the authors' prompts with a footprint and kept everything else.
 
 The tables are given as numbers; the figures below draw them as maps (brighter is larger, each row on its own scale).
 
-![Experiment 1 footprints](assets/footprint_exp1.png)
+<p align="center">
+  <img src="assets/footprint_exp1.png" alt="Experiment 1 footprints" width="480">
+</p>
 
-![Experiment 2 footprints](assets/footprint_exp2.png)
+<p align="center">
+  <img src="assets/footprint_exp2.png" alt="Experiment 2 footprints" width="360">
+</p>
 
 | | Raw weights (Turing) | Footprint | Footprint, shuffled |
 |---|---|---|---|

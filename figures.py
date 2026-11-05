@@ -161,8 +161,10 @@ def footprint_figures():
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib import font_manager
-    font_manager.fontManager.addfont("/System/Library/Fonts/SFNS.ttf")
-    plt.rcParams.update({"font.family": "SF Pro", "text.color": FG, "figure.facecolor": BG, "savefig.facecolor": BG})
+    sf = "/System/Library/Fonts/SFNS.ttf"
+    font_manager.fontManager.addfont(sf)
+    plt.rcParams.update({"font.family": font_manager.FontProperties(fname=sf).get_name(), "text.color": FG,
+                         "figure.facecolor": BG, "savefig.facecolor": BG})
 
     def draw(ax, m, lo, hi):
         ax.imshow(m, cmap="magma", vmin=lo, vmax=hi, interpolation="nearest")
