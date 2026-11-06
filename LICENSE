@@ -1,6 +1,7 @@
 This repository holds content under two licences.
 
-1. The code (*.py): the MIT License, below.
+1. The code (*.py), and the cellular-automaton prompts and networks we made (prompts/ca/, runs/ca/sources/): the MIT
+   License, below.
 
 2. Content from the logs of "Sparks of Weight-Space Programming: LLMs can natively read & write neural network
    weights" (Rikiya Takehi, Jayden Teoh, Alex Zhang and Omar Khattab; https://github.com/RikiyaT/lm_understand-logs),
@@ -8,7 +9,8 @@ This repository holds content under two licences.
    https://creativecommons.org/licenses/by/4.0/legalcode. This content is
    - specs/astra_breakout_strategy.txt: the paragraph that opens Astra's Breakout answer, unchanged;
    - specs/astra_breakout_wiring.txt: Astra's Breakout edits block, with every value replaced by a placeholder;
-   - prompts/: the authors' Experiment 1 and 2 prompts, adapted to show footprint tables in place of the weights.
+   - prompts/exp1_footprint.txt and prompts/exp2_footprint.txt: the authors' Experiment 1 and 2 prompts, adapted to
+     show footprint tables in place of the weights.
    The model outputs in runs/ are released under CC BY 4.0 as far as we hold any rights in them.
 
 MinAtar's source code (GPL-3.0) is not included. The prompts that quote it are rebuilt at run time from

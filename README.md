@@ -1,26 +1,31 @@
 # [WSPlore] Follow-up Explorations of Weight-Space Programming
 
-Follow-up experiments to *Sparks of Weight-Space Programming*: how well language models read and write
+Follow-up experiments to *Sparks of Weight-Space Programming*: how well language models read, write and edit
 neural-network weights directly, without training.
 
 In the original work (Takehi, Teoh, Zhang and Khattab, MIT CSAIL, November 2026), GPT-6 Astra names the task of a
-network from its weights and writes working networks from scratch. The experiments here so far:
+network from its weights, writes working networks from scratch and edits networks to change what they do. The
+experiments here so far:
 
 1. **Writing.** Astra writes a Breakout network that scores about 500. If other models are given Astra's own
    explanation of that network, taken from its answer, can they write it too, and where do they fail?
 2. **Reading.** How much of the weight-reading result can a model get from a crude summary of one layer?
+3. **Editing.** Does a correct edit show that the model read the network? A new task, a small convolutional network
+   that runs a cellular automaton, where every way to edit without reading can be found and closed.
 
-![Three models play the same Breakout episode, each with a network written from Astra's own explanation](assets/l1_three_models.gif)
+<p align="center">
+  <img src="assets/ca_B128_S0.png" alt="The new rule and the networks edited by GPT-6.1 Sol, Claude Opus 5.5 and GPT-6 Luna, grown from the same cell" width="720">
+</p>
 
-*Each network was written by the model in one reply, given the authors' Breakout prompt plus the explanation of the
-design taken from Astra's own answer. Same episode, same seed. A red frame marks a step where the network's most likely move
-differs from what Astra's network would do in that state.*
+*Given a trained network that runs a cellular automaton, each model is asked to change one rule. GPT-6.1 Sol and
+Claude Opus 5.5 succeed; GPT-6 Luna fails (red: cells unlike the new rule). † Task worded as a change of rule.*
 
 ## Contents
 
 - [Findings](#findings)
 - [Writing weights: give the model Astra's own explanation](#writing-weights-give-the-model-astras-own-explanation)
 - [Reading weights: the footprint baseline](#reading-weights-the-footprint-baseline)
+- [Editing weights: one rule inside a cellular automaton](#editing-weights-one-rule-inside-a-cellular-automaton)
 - [Running it](#running-it)
 - [Reproduction](#reproduction)
 - [Acknowledgements](#acknowledgements)
@@ -57,7 +62,24 @@ differs from what Astra's network would do in that state.*
 - The shortcut has a limit. On Experiment 2 (which shape a generator draws), the per-pixel average gives no gain
   (6/9 against 8/15 from the weights), and Opus 4.5 calls the square a disc every time.
 
+### [3] Editing: a correct edit proves little while a shortcut exists; with every shortcut closed, Sol and Opus 5.5 still get it exactly right
+
+- A new task: a small convolutional network (89 weights) runs a cellular automaton, and the model must change one of
+  its rules and keep everything else. Every answer is checked on all 512 possible inputs.
+- With an easy shortcut open, every model succeeds. Told the rule, Claude Opus 5.5 rebuilt the network from scratch;
+  given spare channels, all four models solved both networks (8 of 8), mostly by patching in a detector that works
+  without the rule.
+- With every shortcut closed, the edit needs the hidden rule. GPT-6.1 Sol and Claude Opus 5.5 read it and edited
+  exactly on 4 of 4 networks. GPT-6 Luna managed 1 of 4; where it misread the rule, its network is wrong in exactly
+  the cases it misread.
+
 ## Writing weights: give the model Astra's own explanation
+
+![Three models play the same Breakout episode, each with a network written from Astra's own explanation](assets/l1_three_models.gif)
+
+*Each network was written by the model in one reply, given the authors' Breakout prompt plus the explanation of the
+design taken from Astra's own answer. Same episode, same seed. A red frame marks a step where the network's most likely move
+differs from what Astra's network would do in that state.*
 
 The task is the authors' Experiment 5 on Breakout: write all 20,486 weights of a 600-32-32-6 tanh policy for
 MinAtar Breakout in one reply, with no tools and no feedback. The network is scored over 1,000 episodes with sampled
@@ -157,6 +179,94 @@ The tables are given as numbers; the figures below draw them as maps (brighter i
 For Opus 4.5, then, Experiment 1 is easier from where the inputs are used than from the weights themselves, and a
 correct answer on it is weak evidence that a model understands the computation. Experiment 2 is not solved this way.
 
+## Editing weights: one rule inside a cellular automaton
+
+The original study also edits networks: Astra repairs a driving network (Experiment 4) and makes Qwen3.5-0.8B better
+at mathematics (Experiment 8). An edit is evidence that the model read the network only if it could not have succeeded
+without reading it. So we built a small task where every answer is checked exactly, and closed the shortcuts one round
+at a time.
+
+### Setup
+
+- **Network.** A 3 × 3 convolution with 8 channels and ReLU, then a 1 × 1 convolution; a cell is alive at the next
+  step if the output is positive. That is 89 weights, applied at every cell and every step: the smallest kind of
+  neural cellular automaton ([Gilpin, 2019](https://arxiv.org/abs/1809.02942);
+  [Mordvintsev et al., 2020](https://distill.pub/2020/growing-ca/)).
+- **Exact check.** A cell's next state depends only on its 3 × 3 block, so the 512 possible blocks check the whole
+  network, with no sampling and no score noise.
+- **Rules.** Life-like rules, written B…/S…: the live-neighbour counts at which a dead cell is born and a live cell
+  survives. Conway's Game of Life is B3/S23.
+- **Task.** Add one birth: a dead cell with exactly 6 live neighbours is also born. That changes 28 blocks; the other
+  484 must keep their output.
+- **Answer.** As in the authors' Experiment 5: the weights as text, one reply, no tools, no simulation, and an edits
+  block.
+- **Networks.** Written by us, with each channel a readable threshold on the neighbour count, or trained with Adam on
+  the 512 blocks until exact, with all 8 channels in use.
+
+### Three rounds, each closing a shortcut
+
+| Round | The model is told | Shortcut left open | Result |
+|---|---|---|---|
+| 1 | The old rule (Life) and the new one (HighLife, B36/S23) | Ignore the network and write a new one | Opus 5.5 exact on every network; it replaced the trained one (79 of 89 weights) |
+| 2 | Only the change | Spare channels: free two, add a detector with large weights | Written networks 12/12; trained networks with two spare channels 8/8, mostly changing two to four channels |
+| 3 | Only the change, and to state the rule it reads | None | Sol 4/4, Opus 5.5 4/4, Luna 1/4 |
+
+Round 1 used Claude Opus 5.5 only. Rounds 2 and 3 used GPT-6.1 Sol, GPT-6 Luna and Claude Opus 5.5, with Claude Opus 4.5
+also in round 2. Round 2's third trained network (B38/S1) had a harder shortcut, freeing three channels by folding them
+into others: Sol rebuilt it exactly, Opus 4.5 got one block wrong, Luna gave no edit, and Opus 5.5 was refused.
+
+### Round 3: no shortcut left
+
+We kept a trained network only if no two of its channels can be freed (set to zero, or folded into a channel with a
+proportional activation) without changing an output, and no single freed channel can add the births on its own
+(`spare()` in [ca_edit.py](ca_edit.py)). Small networks are hard to train on Life-like rules
+([Springer and Kenyon, 2020](https://arxiv.org/abs/2009.01398)); 1 to 7 of 60 training seeds per rule passed. With no
+room left, any correct edit has to reproduce the hidden rule on 484 blocks, so it needs the rule. The answer must also
+state that rule (a `CURRENT RULE: B…/S…` line), which we score on its own.
+
+| Hidden rule | GPT-6.1 Sol | Claude Opus 5.5 | GPT-6 Luna |
+|---|---|---|---|
+| B128/S0 | Rule right, edit exact | Rule right, edit exact† | Rule right, edit wrong: no births at 6 |
+| B13/S8 | Rule right, edit exact | Rule right, edit exact† | Rule right, edit exact |
+| B78/S167 | Rule right, edit exact | Rule right, edit exact† | Rule read as "not Life-like", no edit |
+| B24/S5 | Rule right, edit exact | Rule right, edit exact | Rule read as B24/S, edit wrong on 56 blocks |
+
+† Task worded as a change of rule (see Refusals).
+
+![The new rule B246/S5 and the networks edited by GPT-6.1 Sol, Claude Opus 5.5 and GPT-6 Luna, grown from the same two cells](assets/ca_B24_S5.gif)
+
+*Hidden rule B24/S5, so the new rule is B246/S5. Each edited network and the new rule, grown from the same two cells.
+Luna read the old rule as B24/S. Its first wrong cells, at step 22, are live cells with 5 live neighbours: the case it
+misread.*
+
+- Every exact edit rewrites all eight channels: the model works out the rule, then builds a new network for it.
+- Reading costs Opus 5.5 43,000–76,000 output tokens per network, and Sol 15,000–24,000.
+- Luna fails in two ways. On B24/S5 it misreads the rule, and its network is wrong on exactly the 56 blocks it
+  misread. On B128/S0 it reads the rule right but leaves out the change.
+
+### Refusals
+
+With the rule hidden and a trained network, Anthropic's cyber safeguard stopped Opus 5.5 in 5 of 8 calls, during its
+reasoning (0 of 7 in every other condition; Opus 4.5 was never refused). "Make these inputs give a new output and keep
+every other output" is also how one plants a trigger in a model. Worded as a change of rule ("from now on, a dead cell
+with exactly 6 live neighbours is also born; nothing else about the rule changes"), the same four prompts gave no
+refusals and four exact edits. Three of Opus 5.5's round 3 results use that wording.
+
+### What this means for the original edits
+
+The original study's edits were made with shortcuts open. In Experiment 8 the prompt names the failure to look for
+(the model repeating itself until it is cut off) and allows up to 50 calls that run the model on practice problems.
+MATH-500 accuracy rises from 7.9% to 48.1% as the share of answers cut off at 32,768 tokens falls from 93% to 33%
+(authors' logs). [Nichele (2026)](https://github.com/stenichele/NCA-weight-space-reprogramming) edits a growing
+neural cellular automaton with Astra: six of the seven edits permute, reflect or rescale its inputs and outputs, and
+the seventh adds a timer after 36 rounds of simulation feedback. None of this makes those edits wrong; it means their
+success alone does not show the network was read. With every shortcut closed, two of three models here do read it, on
+networks of 89 weights and one run per cell.
+
+All scores are in [runs/ca/scores.json](runs/ca/scores.json). One Luna answer in round 2 wrote whole kernels in the
+form the prompt uses to show them (`K[k] = [[…], […], […]]`); we extended the edits reader to accept that form and
+scored every answer again, which changed only that answer, from wrong to exact.
+
 ## Running it
 
 The code imports the harness of [weights_editing](https://github.com/alan-turing-institute/weights_editing): its
@@ -178,6 +288,10 @@ uv run agreement.py                                                       # same
 uv run footprint.py --exp 1 --models claude-opus-4-5 --reps 3            # footprint prompts
 uv run footprint.py --exp 1 --models claude-opus-4-5 --control shuffled
 uv run figures.py                                                         # figures in assets/
+uv run ca_edit.py --sources                                               # CA networks
+uv run ca_edit.py --variant closed --dry-run                              # CA prompts
+uv run ca_edit.py --variant closed --models gpt-6.1-sol gpt-6-luna claude-opus-5-5
+uv run ca_edit.py --rescore                                               # all CA scores
 ```
 
 | Path | Contents |
@@ -185,9 +299,10 @@ uv run figures.py                                                         # figu
 | `design.py` | Experiment 5 with part of Astra's answer added (L0–L2) |
 | `agreement.py` | Same-move rate against Astra's network by game phase, on Astra's and each network's own states |
 | `footprint.py` | Experiments 1 and 2 with footprint tables in place of the weights |
-| `figures.py` | The figures and the animation |
+| `figures.py` | The figures and the animations |
+| `ca_edit.py` | The cellular-automaton editing task: networks, prompts, model calls and exact checks |
 | `specs/` | The parts of Astra's answer used at L1 and L2 |
-| `prompts/` | The footprint prompt templates |
+| `prompts/` | The footprint prompt templates, and every cellular-automaton prompt (`prompts/ca/`) |
 | `runs/` | Every run: the model's answer, the raw API response, settings, usage and scores |
 
 Prompts that contain MinAtar's source code are not stored; `design.py` rebuilds them, and each run records the
@@ -222,9 +337,18 @@ and models.
   Experiments*, 2019 ([arXiv:1903.03176](https://arxiv.org/abs/1903.03176)).
 - [weight-space-horizon](https://github.com/hamley241/weight-space-horizon), for the step-cap analysis of Astra's
   Breakout network.
+- W. Gilpin, *Cellular automata as convolutional neural networks*, Physical Review E 100, 032402, 2019
+  ([arXiv:1809.02942](https://arxiv.org/abs/1809.02942)).
+- A. Mordvintsev, E. Randazzo, E. Niklasson and M. Levin, *Growing Neural Cellular Automata*, Distill, 2020
+  ([distill.pub/2020/growing-ca](https://distill.pub/2020/growing-ca/)).
+- J. M. Springer and G. T. Kenyon, *It's Hard for Neural Networks To Learn the Game of Life*, 2020
+  ([arXiv:2009.01398](https://arxiv.org/abs/2009.01398)).
+- S. Nichele, *Weight space reprogramming of neural cellular automata*, 2026
+  ([repository](https://github.com/stenichele/NCA-weight-space-reprogramming)).
 
 ## Licence
 
-The code is under the MIT License. The parts of Astra's answer in `specs/` come from the authors' logs and are under
+The code is under the MIT License, and so are the cellular-automaton prompts and networks (`prompts/ca/`,
+`runs/ca/sources/`), which are ours. The parts of Astra's answer in `specs/` come from the authors' logs and are under
 CC BY 4.0; `specs/astra_breakout_wiring.txt` is Astra's edits block with every value removed. The model outputs in
 `runs/` are released under CC BY 4.0 as far as we hold any rights in them. See [LICENSE](LICENSE).
