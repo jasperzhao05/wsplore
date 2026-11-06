@@ -3,15 +3,18 @@
               plus Breakout's shuffled control; Exp 2: each shape, real and shuffled)
   gif         three models, each given Astra's design paragraph (L1), play the same Breakout episode; each panel
               shows whether the network's most likely move matches what Astra's network would do in that state
+  ca          the cellular-automaton edits of round 3: the new rule and each model's edited network, run from the
+              same seed, cells unlike the new rule in red (B24/S5 as a GIF, the last step of B128/S0 as a PNG)
 
   uv run figures.py                      # writes everything in assets/
   uv run figures.py footprint
 """
-import argparse, glob, os
+import argparse, glob, json, os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import design as t
 import footprint as fp
+import ca_edit as ca
 
 exp5 = t.exp5
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -219,9 +222,124 @@ def gif():
           f"{os.path.getsize(out) / 1e6:.2f} MB")
 
 
+CA_N, CA_CELL, CA_STEPS, CA_MS = 80, 3, 36, 120
+CA_SEEDS = {"B24/S5": [(40, 39), (40, 40)], "B128/S0": [(40, 40)]}
+CA_PANELS = [("GPT-6.1 Sol", "gpt-6.1-sol"), ("Claude Opus 5.5", "claude-opus-5-5"), ("GPT-6 Luna", "gpt-6-luna")]
+
+
+def ca_run(rule, model):
+    """The model's closed-round answer for this rule; if it was refused, its answer to the rule-change wording."""
+    for variant in ("closed", "closed-rule-change"):
+        for f in sorted(glob.glob(os.path.join(HERE, "runs", "ca", variant, ca.rule_id(rule), "trained", model, "*",
+                                               "r0", "run.json"))):
+            rec = json.load(open(f))
+            if not rec["refused"]:
+                z = np.load(f.replace("run.json", "net.npz"))
+                return {n: z[n] for n in ca.NAMES}, rec["rule_stated"], variant != "closed"
+    raise FileNotFoundError(f"no answer for {rule} from {model}")
+
+
+def ca_frames(rule):
+    """The new rule, computed directly, and each model's edited network, run from the same seed on an 80 x 80 torus."""
+    def by_rule(g):
+        born, survive = ca.parse_rule(target)
+        n = sum(np.roll(np.roll(g, i, 0), j, 1) for i in (-1, 0, 1) for j in (-1, 0, 1) if (i, j) != (0, 0))
+        return np.where(g == 1, np.isin(n, list(survive)), np.isin(n, list(born))).astype(np.uint8)
+
+    def by_net(net):
+        def step(g):
+            x = np.stack([np.roll(np.roll(g, 1 - i, 0), 1 - j, 1) for i in range(3) for j in range(3)], -1)
+            return ca.alive(net, x.reshape(-1, 9).astype(float)).reshape(g.shape).astype(np.uint8)
+        return step
+
+    target = ca.with_birth(rule, 6)
+    seed = np.zeros((CA_N, CA_N), np.uint8)
+    for r, c in CA_SEEDS[rule]:
+        seed[r, c] = 1
+    panels = [{"name": "The new rule", "sub": f"{target}, from the rule itself", "step": by_rule}]
+    for name, model in CA_PANELS:
+        net, stated, reworded = ca_run(rule, model)
+        panels.append({"name": name + (" †" if reworded else ""), "sub": f"read the old rule as {stated}",
+                       "right": stated == rule, "step": by_net(net)})
+    for p in panels:
+        g, p["grids"] = seed.copy(), []
+        for _ in range(CA_STEPS + 1):
+            p["grids"].append(g)
+            g = p["step"](g)
+    return panels
+
+
+def ca_render(k, panels, rule):
+    board = CA_N * CA_CELL
+    pad, gap, outer, head, foot, top = 14, 14, 24, 58, 70, 44
+    panel_w = board + 2 * pad
+    w = 4 * panel_w + 3 * gap + 2 * outer
+    h = top + head + board + foot + outer
+    img = Image.new("RGB", (w * S, h * S), BG)
+    d = ImageDraw.Draw(img)
+    text(d, (outer, 18), f"Hidden rule {rule} plus births at 6 · same seed · each network edited by the model in one reply, "
+         "from its weights alone", F_TOP, MUTED)
+    text(d, (w - outer, 18), f"step {k:>2}", F_SUB, MUTED, "ra")
+    truth = panels[0]["grids"][k]
+    for i, p in enumerate(panels):
+        x0, y0 = outer + i * (panel_w + gap), top
+        g = p["grids"][k]
+        wrong = g != truth
+        box(d, (x0, y0, x0 + panel_w, y0 + head + board + foot), PANEL, 10)
+        text(d, (x0 + pad, y0 + 14), p["name"], F_TITLE, FG)
+        color = MUTED if i == 0 else (OK if p["right"] else BAD)
+        text(d, (x0 + pad, y0 + 38), p["sub"], F_SUB, color)
+        bx, by = x0 + pad, y0 + head
+        box(d, (bx, by, bx + board, by + board), BOARD, 6)
+        for r, c in np.argwhere((g == 1) | wrong):
+            d.rectangle([(bx + c * CA_CELL) * S, (by + r * CA_CELL) * S, (bx + (c + 1) * CA_CELL) * S - 1,
+                         (by + (r + 1) * CA_CELL) * S - 1], fill=BAD if wrong[r, c] else BALL)
+        fy = by + board + 14
+        if i == 0:
+            text(d, (x0 + pad, fy), "Alive cells", F_SMALL, MUTED)
+            text(d, (x0 + panel_w - pad, fy), f"{int(g.sum())}", F_BIG, FG, "ra")
+        else:
+            n = int(wrong.sum())
+            text(d, (x0 + pad, fy), "Cells unlike the new rule", F_SMALL, MUTED)
+            text(d, (x0 + panel_w - pad, fy), f"{n}", F_BIG, OK if n == 0 else BAD, "ra")
+            first = next((s for s in range(len(p["grids"])) if (p["grids"][s] != panels[0]["grids"][s]).any()), None)
+            if first is not None and k >= first:
+                text(d, (x0 + pad, fy + 26), f"first wrong at step {first}", F_SMALL, BAD)
+    return img
+
+
+def ca_gif(rule):
+    panels = ca_frames(rule)
+    images = [ca_render(k, panels, rule) for k in range(CA_STEPS + 1)]
+    sample = images[::6] + [images[-1]]
+    sheet = Image.new("RGB", (images[0].width, images[0].height * len(sample)))
+    for k, im in enumerate(sample):
+        sheet.paste(im, (0, k * images[0].height))
+    pal = sheet.quantize(colors=255, method=Image.Quantize.MEDIANCUT)
+    frames = [im.quantize(palette=pal, dither=Image.Dither.NONE) for im in images]
+    out = os.path.join(HERE, "assets", f"ca_{ca.rule_id(rule)}.gif")
+    frames[0].save(out, save_all=True, append_images=frames[1:], duration=[CA_MS] * (len(frames) - 1) + [HOLD_MS],
+                   optimize=False)    # plays once and stays on the last frame
+    print(f"{out}: {len(frames)} frames, {images[0].width}x{images[0].height}, "
+          f"{(CA_MS * (len(frames) - 1) + HOLD_MS) / 1000:.1f}s, {os.path.getsize(out) / 1e6:.2f} MB")
+
+
+def ca_still(rule):
+    """The last frame as a PNG (the README's main figure)."""
+    img = ca_render(CA_STEPS, ca_frames(rule), rule)
+    out = os.path.join(HERE, "assets", f"ca_{ca.rule_id(rule)}.png")
+    img.save(out, optimize=True)
+    print(f"{out}: {img.width}x{img.height}, {os.path.getsize(out) / 1e6:.2f} MB")
+
+
+def ca_figures():
+    ca_gif("B24/S5")
+    ca_still("B128/S0")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    makers = {"footprint": footprint_figures, "gif": gif}
+    makers = {"footprint": footprint_figures, "gif": gif, "ca": ca_figures}
     ap.add_argument("figures", nargs="*", choices=list(makers), help="default: all")
     os.makedirs(os.path.join(HERE, "assets"), exist_ok=True)
     for name in ap.parse_args().figures or makers:
