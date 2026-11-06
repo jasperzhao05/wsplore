@@ -1,0 +1,4 @@
+3 calls to claude-opus-5-5
+B78/S167   trained   claude-opus-5-5    r0  read B78/S167 (right)  exact=True  target 28/28  broken elsewhere 0/484  weights changed 79/89  edits 79/79  tokens={'input': 1357, 'output': 42551, 'reasoning': None}  342.8s  cost=0.8564
+B128/S0    trained   claude-opus-5-5    r0  read B128/S0 (right)  exact=True  target 28/28  broken elsewhere 0/484  weights changed 68/89  edits 69/69  tokens={'input': 1350, 'output': 71564, 'reasoning': None}  641.5s  cost=1.4367
+B13/S8     trained   claude-opus-5-5    r0  read B13/S8 (right)  exact=True  target 28/28  broken elsewhere 0/484  weights changed 80/89  edits 80/80  tokens={'input': 1352, 'output': 76048, 'reasoning': None}  649.2s  cost=1.5264

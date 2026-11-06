@@ -1,0 +1,44 @@
+{
+ "exp": "ca_edit",
+ "variant": "closed",
+ "condition": "trained",
+ "source_rule": "B78/S167",
+ "target_rule": "B678/S167",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "fd6fd7bcec1316ee6afb3d9789c893d8511fa9d289411bad8df1f36eb7b3a888",
+ "wall_s": 335.1,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 1118,
+  "output": 24289,
+  "reasoning": 23408
+ },
+ "cost_usd": 0.2451,
+ "edits": {
+  "found": true,
+  "statements": 49,
+  "applied": 49,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 49,
+  "weights_total": 89,
+  "channels_touched": 8
+ },
+ "rule_stated": "B78/S167",
+ "rule_right": true
+}

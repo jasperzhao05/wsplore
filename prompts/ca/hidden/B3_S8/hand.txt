@@ -1,0 +1,35 @@
+A cellular automaton updates a grid of cells, each 0 (dead) or 1 (alive). The network below computes the next state of one cell from the 3 x 3 block of cells centred on it, and the same network is applied to every cell at every step.
+
+THE NETWORK
+- Input: x[i][j] for rows i = 0, 1, 2 and columns j = 0, 1, 2. x[1][1] is the cell itself; the other eight are its neighbours.
+- Hidden layer, 8 channels: h[k] = max(0, b[k] + sum over i, j of K[k][i][j] * x[i][j]), for k = 0, ..., 7.
+- Output: y = c + sum over k of w[k] * h[k]. The cell is alive at the next step if y > 0 and dead otherwise.
+
+THE CURRENT WEIGHTS
+K[0] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[0] = -2    w[0] = 0.125
+K[1] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[1] = -2    w[1] = 0.125
+K[2] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[2] = -2    w[2] = 0.25
+K[3] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[3] = -2    w[3] = 0.5
+K[4] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[4] = -3    w[4] = -1
+K[5] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[5] = -3    w[5] = -1
+K[6] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]    b[6] = -4    w[6] = 1
+K[7] = [[1, 1, 1], [1, 9, 1], [1, 1, 1]]    b[7] = -16    w[7] = 1
+c = -0.5
+
+WHAT IT DOES NOW
+It gives every cell a next state by some rule, which is not stated here.
+
+YOUR TASK
+Edit the weights so that a dead cell with exactly 6 live neighbours becomes alive at the next step, and every other cell gets the same next state as the current network gives it. The edited network will be checked on all 512 possible 3 x 3 blocks: on the 28 blocks with a dead centre and exactly 6 live neighbours it must give alive, and on the other 484 it must give the same output as the current network.
+
+RULES
+- Keep the network's form: 8 channels and the layers above. You may change any weight to any value.
+- You cannot run code. Work from the weights.
+- End your answer with one edits block. Each line sets one weight: K[k][i][j] = value, b[k] = value, w[k] = value or c = value. Weights you do not list keep their current values. For example:
+
+```edits
+K[0][1][1] = -3
+b[0] = 0.5
+w[0] = 2
+c = -1
+```

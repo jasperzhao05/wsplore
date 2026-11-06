@@ -1,0 +1,42 @@
+{
+ "exp": "ca_edit",
+ "variant": "hidden",
+ "condition": "trained",
+ "source_rule": "B3/S8",
+ "target_rule": "B36/S8",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "9cd9db28860be4592f223a7d14c2e66cba3d6c71b61bb62fc2cb240a29a9024a",
+ "wall_s": 117.4,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 1046,
+  "output": 7398,
+  "reasoning": 6656
+ },
+ "cost_usd": 0.0761,
+ "edits": {
+  "found": true,
+  "statements": 22,
+  "applied": 22,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 22,
+  "weights_total": 89,
+  "channels_touched": 2
+ }
+}

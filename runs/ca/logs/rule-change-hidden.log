@@ -1,0 +1,2 @@
+1 calls to claude-opus-5-5
+B38/S1     trained   claude-opus-5-5    r0  read None (wrong)  exact=True  target 28/28  broken elsewhere 0/484  weights changed 59/89  edits 59/59  tokens={'input': 1249, 'output': 26163, 'reasoning': None}  234.6s  cost=0.5283

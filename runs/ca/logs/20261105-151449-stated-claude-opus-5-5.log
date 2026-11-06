@@ -1,0 +1,5 @@
+4 calls to claude-opus-5-5
+scratch   claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 78/89  edits 78/78  tokens={'input': 551, 'output': 3308, 'reasoning': None}  31.7s  cost=0.0684
+trained   claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 79/89  edits 79/79  tokens={'input': 1291, 'output': 4837, 'reasoning': None}  44.4s  cost=0.1019
+scrambled claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 33/89  edits 33/33  tokens={'input': 1289, 'output': 8049, 'reasoning': None}  71.4s  cost=0.1661
+hand      claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 5/89  edits 5/5  tokens={'input': 1113, 'output': 7647, 'reasoning': None}  72.9s  cost=0.1574

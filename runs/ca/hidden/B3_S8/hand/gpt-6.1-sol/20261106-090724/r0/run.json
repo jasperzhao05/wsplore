@@ -1,0 +1,42 @@
+{
+ "exp": "ca_edit",
+ "variant": "hidden",
+ "condition": "hand",
+ "source_rule": "B3/S8",
+ "target_rule": "B36/S8",
+ "rep": 0,
+ "model": "gpt-6.1-sol",
+ "provider": "openai",
+ "model_id": "gpt-6.1-sol",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "1ec312b989200063c9950448a10c0feae12eb73a5cc2a239ce8eff7c98d4675c",
+ "wall_s": 28.5,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 875,
+  "output": 1620,
+  "reasoning": 1246
+ },
+ "cost_usd": 0.018,
+ "edits": {
+  "found": true,
+  "statements": 7,
+  "applied": 7,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 7,
+  "weights_total": 89,
+  "channels_touched": 4
+ }
+}

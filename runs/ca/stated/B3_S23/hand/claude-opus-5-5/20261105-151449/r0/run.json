@@ -1,0 +1,41 @@
+{
+ "exp": "ca_edit",
+ "condition": "hand",
+ "source_rule": "B3/S23",
+ "target_rule": "B36/S23",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "739605af9a62a4362ade6d780d69d2d42eb742b3cf72d7fcab2519cca73ada38",
+ "wall_s": 72.9,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1113,
+  "output": 7647,
+  "reasoning": null
+ },
+ "cost_usd": 0.1574,
+ "edits": {
+  "found": true,
+  "statements": 5,
+  "applied": 5,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 5,
+  "weights_total": 89,
+  "channels_touched": 3
+ }
+}

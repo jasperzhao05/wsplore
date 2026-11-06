@@ -1,0 +1,42 @@
+{
+ "exp": "ca_edit",
+ "variant": "hidden",
+ "condition": "hand",
+ "source_rule": "B38/S1",
+ "target_rule": "B368/S1",
+ "rep": 0,
+ "model": "gpt-6-luna",
+ "provider": "openai",
+ "model_id": "gpt-6-luna",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "b31432b3f23616e7f08e86fac2ea3dd436f8fc4ce2d5bfc974d519a23395fc68",
+ "wall_s": 72.7,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 867,
+  "output": 7416,
+  "reasoning": 7089
+ },
+ "cost_usd": 0.0038,
+ "edits": {
+  "found": true,
+  "statements": 7,
+  "applied": 7,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 7,
+  "weights_total": 89,
+  "channels_touched": 5
+ }
+}

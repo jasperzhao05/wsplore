@@ -1,0 +1,19 @@
+18 calls to gpt-6.1-sol, gpt-6-luna, claude-opus-4-5
+B3/S8      hand      gpt-6-luna         r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 7/89  edits 7/7  tokens={'input': 875, 'output': 2315, 'reasoning': 2048}  24.5s  cost=0.0012
+B3/S8      hand      gpt-6.1-sol        r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 7/89  edits 7/7  tokens={'input': 875, 'output': 1620, 'reasoning': 1246}  28.5s  cost=0.018
+B3/S8      trained   gpt-6.1-sol        r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 22/89  edits 22/22  tokens={'input': 1046, 'output': 7398, 'reasoning': 6656}  117.4s  cost=0.0761
+B38/S1     hand      gpt-6.1-sol        r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 6/89  edits 6/6  tokens={'input': 867, 'output': 2258, 'reasoning': 1841}  38.6s  cost=0.0243
+B3/S8      trained   gpt-6-luna         r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 33/89  edits 33/33  tokens={'input': 1046, 'output': 18516, 'reasoning': 17704}  187.6s  cost=0.0094
+B38/S1     hand      gpt-6-luna         r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 7/89  edits 7/7  tokens={'input': 867, 'output': 7416, 'reasoning': 7089}  72.7s  cost=0.0038
+B3/S8      hand      claude-opus-4-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 7/89  edits 7/7  tokens={'input': 945, 'output': 25228, 'reasoning': None}  303.7s  cost=0.6354
+B3/S8      trained   claude-opus-4-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 33/89  edits 33/33  tokens={'input': 1116, 'output': 33849, 'reasoning': None}  492.9s  cost=0.8518
+B38/S1     trained   gpt-6.1-sol        r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 59/89  edits 59/59  tokens={'input': 1047, 'output': 19647, 'reasoning': 18437}  300.9s  cost=0.1986
+B234/S6    hand      gpt-6.1-sol        r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 6/89  edits 6/6  tokens={'input': 867, 'output': 1879, 'reasoning': 1536}  30.0s  cost=0.0205
+B38/S1     hand      claude-opus-4-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 7/89  edits 7/7  tokens={'input': 937, 'output': 31678, 'reasoning': None}  399.1s  cost=0.7966
+B234/S6    hand      gpt-6-luna         r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 8/89  edits 8/8  tokens={'input': 867, 'output': 5424, 'reasoning': 5098}  62.7s  cost=0.0028
+B234/S6    trained   gpt-6.1-sol        r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 69/89  edits 69/69  tokens={'input': 1048, 'output': 15143, 'reasoning': 13824}  216.0s  cost=0.1535
+B234/S6    hand      claude-opus-4-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 8/89  edits 8/8  tokens={'input': 937, 'output': 22184, 'reasoning': None}  282.2s  cost=0.5593
+B38/S1     trained   gpt-6-luna         r0  exact=None  target None/None  broken elsewhere None/None  weights changed None/None  edits 0/0  tokens={'input': 1047, 'output': 55717, 'reasoning': 54834}  621.6s  cost=0.028
+B38/S1     trained   claude-opus-4-5    r0  exact=False  target 28/28  broken elsewhere 1/484  weights changed 33/89  edits 33/33  tokens={'input': 1117, 'output': 37455, 'reasoning': None}  500.2s  cost=0.942
+B234/S6    trained   gpt-6-luna         r0  exact=False  target 0/28  broken elsewhere 182/484  weights changed 8/89  edits 8/12  tokens={'input': 1048, 'output': 54223, 'reasoning': 53098}  506.9s  cost=0.0272
+B234/S6    trained   claude-opus-4-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 22/89  edits 22/22  tokens={'input': 1118, 'output': 38152, 'reasoning': None}  500.5s  cost=0.9594

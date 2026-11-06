@@ -1,0 +1,47 @@
+{
+ "exp": "ca_edit",
+ "variant": "hidden",
+ "condition": "trained",
+ "source_rule": "B234/S6",
+ "target_rule": "B2346/S6",
+ "rep": 0,
+ "model": "gpt-6-luna",
+ "provider": "openai",
+ "model_id": "gpt-6-luna",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "a1b5c2205f318bab318f14baf454f9ba413100677936c4fbf1f91f4f9d8723ed",
+ "wall_s": 506.9,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 1048,
+  "output": 54223,
+  "reasoning": 53098
+ },
+ "cost_usd": 0.0272,
+ "edits": {
+  "found": true,
+  "statements": 12,
+  "applied": 8,
+  "bad": [
+   "K[0] = [[32.490222, -7.607008, -7.668559], [-7.572813, -10.085311, -7.607008], [-7.607008, -7.607008, -7.607008]]",
+   "K[1] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]",
+   "K[6] = [[-34.646208, -34.646208, -34.646208], [-34.646208, 99.892972, -34.646208], [-34.646208, -34.656265, -34.646208]]",
+   "K[7] = [[1, 1, 1], [1, -9, 1], [1, 1, 1]]"
+  ]
+ },
+ "score": {
+  "exact": false,
+  "blocks_right": 302,
+  "target_right": 0,
+  "target_blocks": 28,
+  "broken_elsewhere": 182,
+  "other_blocks": 484,
+  "weights_changed": 8,
+  "weights_total": 89,
+  "channels_touched": 4
+ }
+}

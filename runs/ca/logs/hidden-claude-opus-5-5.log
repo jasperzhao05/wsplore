@@ -1,0 +1,9 @@
+6 calls to claude-opus-5-5
+B3/S8      hand      claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 7/89  edits 7/7  tokens={'input': 1047, 'output': 2555, 'reasoning': None}  24.8s  cost=0.0553
+B234/S6    hand      claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 8/89  edits 8/8  tokens={'input': 1039, 'output': 2518, 'reasoning': None}  23.5s  cost=0.0545
+B38/S1     trained   claude-opus-5-5    r0  exact=None  target None/None  broken elsewhere None/None  weights changed None/None  edits 0/0  tokens={'input': 1222, 'output': 4800, 'reasoning': None}  48.6s  cost=0.1009
+B38/S1     hand      claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 6/89  edits 6/6  tokens={'input': 1039, 'output': 6512, 'reasoning': None}  61.0s  cost=0.1344
+B3/S8      trained   claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 24/89  edits 24/24  tokens={'input': 1225, 'output': 20009, 'reasoning': None}  189.0s  cost=0.4051
+B234/S6    trained   claude-opus-5-5    r0  exact=True  target 28/28  broken elsewhere 0/484  weights changed 23/89  edits 23/23  tokens={'input': 1234, 'output': 27795, 'reasoning': None}  245.9s  cost=0.5608
+1 calls to claude-opus-5-5
+B38/S1     trained   claude-opus-5-5    r0  exact=None  target None/None  broken elsewhere None/None  weights changed None/None  edits 0/0  tokens={'input': 1222, 'output': 13045, 'reasoning': None}  122.7s  cost=0.2658

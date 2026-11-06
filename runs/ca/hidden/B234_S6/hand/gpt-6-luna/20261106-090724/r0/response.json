@@ -1,0 +1,31 @@
+{
+ "id": "chatcmpl-Eh2rML6UNkbGuDwNCnLARtXrpi0UY",
+ "model": "gpt-6-luna",
+ "streamed": true,
+ "usage": {
+  "prompt_tokens": 867,
+  "completion_tokens": 5424,
+  "total_tokens": 6291,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 5098,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0,
+   "rejected_prediction_tokens": 0
+  }
+ },
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "For a dead centre, the current output is\n\\[\n-\\tfrac12 +(n-1)_+-(n-2)_+-(n-4)_+ +(n-5)_+,\n\\]\nwhere \\(n\\) is the number of live neighbours and \\(a_+=\\max(0,a)\\). Channels 4\u20137 are currently inactive for a dead centre. The edits below make their combined contribution\n\\[\n(n-5)_+ -2(n-6)_+ +(n-7)_+,\n\\]\nwhich is 1 when \\(n=6\\) and 0 for every other integer \\(n\\in[0,8]\\). Thus only the specified dead-centre blocks change state.\n\nFor a live centre, each edited channel\u2019s preactivation remains exactly the same as before, so all live-centre blocks retain their current output.\n\n```edits\nK[4][1][1] = 0\nb[4] = -5\nK[5][1][1] = 0\nb[5] = -6\nK[6][1][1] = 0\nb[6] = -6\nK[7][1][1] = 0\nb[7] = -7\n```"
+   },
+   "finish_reason": "stop"
+  }
+ ]
+}

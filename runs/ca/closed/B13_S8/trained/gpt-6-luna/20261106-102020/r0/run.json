@@ -1,0 +1,44 @@
+{
+ "exp": "ca_edit",
+ "variant": "closed",
+ "condition": "trained",
+ "source_rule": "B13/S8",
+ "target_rule": "B136/S8",
+ "rep": 0,
+ "model": "gpt-6-luna",
+ "provider": "openai",
+ "model_id": "gpt-6-luna",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "575f568f2c75fe686805cf4ff3e5b2ab6a7fb001695a9be6ae6219fe02d843d8",
+ "wall_s": 357.7,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 1114,
+  "output": 37884,
+  "reasoning": 36350
+ },
+ "cost_usd": 0.0191,
+ "edits": {
+  "found": true,
+  "statements": 89,
+  "applied": 89,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 89,
+  "weights_total": 89,
+  "channels_touched": 8
+ },
+ "rule_stated": "B13/S8",
+ "rule_right": true
+}

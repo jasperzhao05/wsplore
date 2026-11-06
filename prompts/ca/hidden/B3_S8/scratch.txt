@@ -1,0 +1,21 @@
+A cellular automaton updates a grid of cells, each 0 (dead) or 1 (alive). The network below computes the next state of one cell from the 3 x 3 block of cells centred on it, and the same network is applied to every cell at every step.
+
+THE NETWORK
+- Input: x[i][j] for rows i = 0, 1, 2 and columns j = 0, 1, 2. x[1][1] is the cell itself; the other eight are its neighbours.
+- Hidden layer, 8 channels: h[k] = max(0, b[k] + sum over i, j of K[k][i][j] * x[i][j]), for k = 0, ..., 7.
+- Output: y = c + sum over k of w[k] * h[k]. The cell is alive at the next step if y > 0 and dead otherwise.
+
+YOUR TASK
+Choose the weights so that the network implements rule B36/S8: a dead cell with exactly 3 or exactly 6 live neighbours becomes alive; a live cell with 8 live neighbours stays alive; every other cell is dead at the next step. The network will be checked on all 512 possible 3 x 3 blocks and must be right on every one.
+
+RULES
+- Keep the network's form: 8 channels and the layers above.
+- You cannot run code.
+- End your answer with one edits block. Each line sets one weight: K[k][i][j] = value, b[k] = value, w[k] = value or c = value. Every weight starts at 0; list each weight you set. For example:
+
+```edits
+K[0][1][1] = -3
+b[0] = 0.5
+w[0] = 2
+c = -1
+```

@@ -1,0 +1,45 @@
+{
+ "exp": "ca_edit",
+ "variant": "closed",
+ "wording": "rule-change",
+ "condition": "trained",
+ "source_rule": "B78/S167",
+ "target_rule": "B678/S167",
+ "rep": 0,
+ "model": "claude-opus-5-5",
+ "provider": "anthropic",
+ "model_id": "claude-opus-5-5",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "e83d275a2987cd30166468bdbcbcba002c41498d2ad159f9145095886b001632",
+ "wall_s": 342.8,
+ "attempts": null,
+ "error": null,
+ "finish_reason": "end_turn",
+ "refused": false,
+ "usage": {
+  "input": 1357,
+  "output": 42551,
+  "reasoning": null
+ },
+ "cost_usd": 0.8564,
+ "edits": {
+  "found": true,
+  "statements": 79,
+  "applied": 79,
+  "bad": []
+ },
+ "score": {
+  "exact": true,
+  "blocks_right": 512,
+  "target_right": 28,
+  "target_blocks": 28,
+  "broken_elsewhere": 0,
+  "other_blocks": 484,
+  "weights_changed": 79,
+  "weights_total": 89,
+  "channels_touched": 8
+ },
+ "rule_stated": "B78/S167",
+ "rule_right": true
+}

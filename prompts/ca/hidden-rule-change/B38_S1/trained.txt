@@ -1,0 +1,35 @@
+A cellular automaton updates a grid of cells, each 0 (dead) or 1 (alive). The network below computes the next state of one cell from the 3 x 3 block of cells centred on it, and the same network is applied to every cell at every step.
+
+THE NETWORK
+- Input: x[i][j] for rows i = 0, 1, 2 and columns j = 0, 1, 2. x[1][1] is the cell itself; the other eight are its neighbours.
+- Hidden layer, 8 channels: h[k] = max(0, b[k] + sum over i, j of K[k][i][j] * x[i][j]), for k = 0, ..., 7.
+- Output: y = c + sum over k of w[k] * h[k]. The cell is alive at the next step if y > 0 and dead otherwise.
+
+THE CURRENT WEIGHTS
+K[0] = [[-0.866, -0.835, 3.311], [3.383, -1.778, -0.866], [-0.841, -0.835, -0.835]]    b[0] = -1.604    w[0] = -4.307
+K[1] = [[-1.817, -1.817, 2.341], [5.974, 0.523, -1.817], [-1.817, -1.817, -1.817]]    b[1] = -0.524    w[1] = 1.519
+K[2] = [[-1.042, -1.042, -1.042], [-1.042, 1.042, -1.042], [1.043, -1.312, -1.042]]    b[2] = -1.043    w[2] = 2.438
+K[3] = [[1.703, 1.716, 1.4], [1.483, 7.317, 1.703], [1.702, 1.717, 1.716]]    b[3] = -7.949    w[3] = 15.762
+K[4] = [[1.896, 1.896, 1.78], [1.756, 3.674, 1.896], [1.9, 1.896, 1.896]]    b[4] = -5.432    w[4] = -13.178
+K[5] = [[2.472, 2.536, 1.919], [2.988, -4.727, 2.472], [2.549, 2.536, 2.536]]    b[5] = -5.008    w[5] = 9.704
+K[6] = [[-0.272, 0.173, -4.801], [3.249, -1.551, -0.272], [0.2, 0.173, 0.173]]    b[6] = 1.378    w[6] = -2.662
+K[7] = [[2.16, 2.16, 2.065], [1.963, 4.223, 2.16], [2.164, 2.16, 2.16]]    b[7] = -6.187    w[7] = -8.47
+c = -5.813
+
+WHAT IT DOES NOW
+The network implements the update rule of a cellular automaton. The rule is not stated here.
+
+YOUR TASK
+The automaton's rule is changing in one way: from now on, a dead cell with exactly 6 live neighbours is also born (it becomes alive at the next step). Nothing else about the rule changes. Edit the weights so that the network implements the new rule. The edited network will be checked on all 512 possible 3 x 3 blocks: the 28 blocks with a dead centre and exactly 6 live neighbours must give alive, and every other block must give the same next state as under the current rule.
+
+RULES
+- Keep the network's form: 8 channels and the layers above. You may change any weight to any value.
+- You cannot run code. Work from the weights.
+- End your answer with one edits block. Each line sets one weight: K[k][i][j] = value, b[k] = value, w[k] = value or c = value. Weights you do not list keep their current values. For example:
+
+```edits
+K[0][1][1] = -3
+b[0] = 0.5
+w[0] = 2
+c = -1
+```

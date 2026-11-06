@@ -1,0 +1,31 @@
+{
+ "id": "chatcmpl-Eh3qwp76bgnxLjk7loHwvZ87r1ixs",
+ "model": "gpt-6-luna",
+ "streamed": true,
+ "usage": {
+  "prompt_tokens": 1114,
+  "completion_tokens": 58564,
+  "total_tokens": 59678,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 1111,
+   "audio_tokens": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 56827,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0,
+   "rejected_prediction_tokens": 0
+  }
+ },
+ "choices": [
+  {
+   "index": 0,
+   "message": {
+    "role": "assistant",
+    "content": "CURRENT RULE: B128/S0\n\nThe edits replace the network with one that gives a positive output for dead-centre neighbour counts 1, 2, 6, and 8, or for a live centre with 0 neighbours. All other cases give a negative output.\n\n```edits\nK[0][0][0] = 1\nK[0][0][1] = 1\nK[0][0][2] = 1\nK[0][1][0] = 1\nK[0][1][1] = -10\nK[0][1][2] = 1\nK[0][2][0] = 1\nK[0][2][1] = 1\nK[0][2][2] = 1\nK[1][0][0] = 1\nK[1][0][1] = 1\nK[1][0][2] = 1\nK[1][1][0] = 1\nK[1][1][1] = -10\nK[1][1][2] = 1\nK[1][2][0] = 1\nK[1][2][1] = 1\nK[1][2][2] = 1\nK[2][0][0] = 1\nK[2][0][1] = 1\nK[2][0][2] = 1\nK[2][1][0] = 1\nK[2][1][1] = -10\nK[2][1][2] = 1\nK[2][2][0] = 1\nK[2][2][1] = 1\nK[2][2][2] = 1\nK[3][0][0] = 1\nK[3][0][1] = 1\nK[3][0][2] = 1\nK[3][1][0] = 1\nK[3][1][1] = -10\nK[3][1][2] = 1\nK[3][2][0] = 1\nK[3][2][1] = 1\nK[3][2][2] = 1\nK[4][0][0] = 1\nK[4][0][1] = 1\nK[4][0][2] = 1\nK[4][1][0] = 1\nK[4][1][1] = -10\nK[4][1][2] = 1\nK[4][2][0] = 1\nK[4][2][1] = 1\nK[4][2][2] = 1\nK[5][0][0] = 1\nK[5][0][1] = 1\nK[5][0][2] = 1\nK[5][1][0] = 1\nK[5][1][1] = -10\nK[5][1][2] = 1\nK[5][2][0] = 1\nK[5][2][1] = 1\nK[5][2][2] = 1\nK[6][0][0] = 1\nK[6][0][1] = 1\nK[6][0][2] = 1\nK[6][1][0] = 1\nK[6][1][1] = -10\nK[6][1][2] = 1\nK[6][2][0] = 1\nK[6][2][1] = 1\nK[6][2][2] = 1\nK[7][0][0] = -1\nK[7][0][1] = -1\nK[7][0][2] = -1\nK[7][1][0] = -1\nK[7][1][1] = 1\nK[7][1][2] = -1\nK[7][2][0] = -1\nK[7][2][1] = -1\nK[7][2][2] = -1\nb[0] = 0\nb[1] = -1\nb[2] = -2\nb[3] = -3\nb[4] = -7\nb[5] = -8\nb[6] = -9\nb[7] = -0.5\nw[0] = 1\nw[1] = -1\nw[2] = -1\nw[3] = 1\nw[4] = 1\nw[5] = -2\nw[6] = 1\nw[7] = 2\nc = -0.5\n```"
+   },
+   "finish_reason": "stop"
+  }
+ ]
+}

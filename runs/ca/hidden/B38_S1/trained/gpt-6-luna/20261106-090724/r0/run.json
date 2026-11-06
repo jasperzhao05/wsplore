@@ -1,0 +1,32 @@
+{
+ "exp": "ca_edit",
+ "variant": "hidden",
+ "condition": "trained",
+ "source_rule": "B38/S1",
+ "target_rule": "B368/S1",
+ "rep": 0,
+ "model": "gpt-6-luna",
+ "provider": "openai",
+ "model_id": "gpt-6-luna",
+ "reasoning_effort": "xhigh",
+ "thinking_budget": null,
+ "prompt_sha256": "6132fc1b0c4459797ace73aecd54ca8ff721a329b05d26f17fd615e4028d48b0",
+ "wall_s": 621.6,
+ "attempts": 1,
+ "error": null,
+ "finish_reason": "stop",
+ "refused": false,
+ "usage": {
+  "input": 1047,
+  "output": 55717,
+  "reasoning": 54834
+ },
+ "cost_usd": 0.028,
+ "edits": {
+  "found": true,
+  "statements": 0,
+  "applied": 0,
+  "bad": []
+ },
+ "score": null
+}

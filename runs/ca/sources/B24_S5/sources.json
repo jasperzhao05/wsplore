@@ -1,0 +1,49 @@
+{
+ "rule": "B24/S5",
+ "target": "B246/S5",
+ "trained_seed": 38,
+ "seeds_tried": 60,
+ "seeds_usable": 1,
+ "hand": {
+  "source_blocks_right": 512,
+  "channels_active": 8,
+  "channels_needed": 6,
+  "output_layer_suffices": false,
+  "spare": {
+   "freeable_channels": [
+    4,
+    7
+   ],
+   "freeable_pairs": 1,
+   "one_channel_births": false,
+   "closed": false
+  }
+ },
+ "scrambled": {
+  "source_blocks_right": 512,
+  "channels_active": 8,
+  "channels_needed": 6,
+  "output_layer_suffices": false,
+  "spare": {
+   "freeable_channels": [
+    1,
+    7
+   ],
+   "freeable_pairs": 1,
+   "one_channel_births": false,
+   "closed": false
+  }
+ },
+ "trained": {
+  "source_blocks_right": 512,
+  "channels_active": 8,
+  "channels_needed": 8,
+  "output_layer_suffices": false,
+  "spare": {
+   "freeable_channels": [],
+   "freeable_pairs": 0,
+   "one_channel_births": false,
+   "closed": true
+  }
+ }
+}

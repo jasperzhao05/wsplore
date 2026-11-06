@@ -965,6 +965,7 @@ dependencies = [
     { name = "minatar" },
     { name = "numpy" },
     { name = "pillow" },
+    { name = "scipy" },
 ]
 
 [package.metadata]
@@ -974,4 +975,5 @@ requires-dist = [
     { name = "minatar", specifier = "==1.0.15" },
     { name = "numpy", specifier = ">=2.5.4" },
     { name = "pillow", specifier = ">=13.0.0" },
+    { name = "scipy", specifier = ">=1.18.1" },
 ]
