@@ -37,6 +37,8 @@ CELL = BLOCKS[:, 4].astype(int)
 NEIGHBOURS = (BLOCKS.sum(1) - BLOCKS[:, 4]).astype(int)
 CONDITIONS = ("hand", "scrambled", "trained", "scratch")
 VARIANTS = ("stated", "hidden", "closed")
+# the conditions each round ran (the hidden round dropped scrambled and scratch; the closed round has trained only)
+RAN = {"stated": CONDITIONS, "hidden": ("hand", "trained"), "closed": ("trained",)}
 SOURCES = os.path.join(HERE, "runs", "ca", "sources")
 NAMES = {"K": (K, 3, 3), "b": (K,), "w": (K,), "c": ()}
 TITLES = {"B3/S23": "Conway's Game of Life", "B36/S23": "HighLife"}
@@ -302,7 +304,8 @@ def build_sources():
             info = {"rule": rule, "target": target, "trained_seed": src["trained_seed"],
                     "seeds_tried": src["seeds_tried"], "seeds_usable": src["seeds_usable"]}
             for name in ("hand", "scrambled", "trained"):
-                np.savez(os.path.join(d, f"{name}.npz"), **src[name])
+                if name in RAN[variant]:
+                    np.savez(os.path.join(d, f"{name}.npz"), **src[name])
                 info[name] = describe(src[name], rule, target) | {"spare": spare(src[name], target)}
             json.dump(info, open(os.path.join(d, "sources.json"), "w"), indent=1)
             index[variant].append(rule)
@@ -611,14 +614,14 @@ def main():
     ap.add_argument("--rescore", action="store_true", help="score every recorded answer again; writes runs/ca/scores.json")
     ap.add_argument("--models", nargs="+", help="names from the harness's models.local.toml")
     ap.add_argument("--conditions", nargs="+", choices=CONDITIONS,
-                    help="default: trained for closed, all four for the others")
+                    help="default: the conditions the round ran (RAN)")
     ap.add_argument("--wording", choices=WORDINGS, default="original",
                     help="rule-change: the hidden/closed task worded as a change of rule (a check on refusals)")
     ap.add_argument("--rules", nargs="+", help="only these source rules, e.g. B38/S1 (default: all of the variant's)")
     ap.add_argument("--reps", type=int, default=1)
     ap.add_argument("--workers", type=int, default=4)
     a = ap.parse_args()
-    a.conditions = a.conditions or (["trained"] if a.variant == "closed" else list(CONDITIONS))
+    a.conditions = a.conditions or list(RAN[a.variant])
     if a.selftest:
         return selftest()
     if a.rescore:
@@ -626,7 +629,7 @@ def main():
     if a.sources:
         return build_sources()
     if a.dry_run:
-        for rule in rules_of(a.variant):
+        for rule in (r for r in rules_of(a.variant) if not a.rules or r in a.rules):
             d = os.path.join(HERE, "prompts", "ca", label(a.variant, a.wording), rule_id(rule))
             os.makedirs(d, exist_ok=True)
             for c in a.conditions:
